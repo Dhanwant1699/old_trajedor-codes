@@ -1,0 +1,53 @@
+{
+  "acc_1": {
+    "name": "GTCGlobalSA-Server 2",
+    "trader_name": "amar vijay patil",
+    "login": 52053251,
+    "server": "GTCGlobalSA-Server 2",
+    "broker": "GTC Global SA (Pty) Ltd",
+    "currency": "USD",
+    "terminal_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+    "magic_number": 888991,
+    "max_aggregate_lot": 0.1,
+    "max_single_trade_lot": 0.03,
+    "max_concurrent_positions": 2,
+    "scaling_strategy": "AI_DYNAMIC_PYRAMID",
+    "daily_target": 20000.0,
+    "daily_max_loss": 50000.0,
+    "is_active": true
+  },
+  "acc_2": {
+    "name": "ICMarketsSC-MT5-3",
+    "trader_name": "AMOL AMBADAS TAWAR Tawar",
+    "login": 8065799,
+    "server": "ICMarketsSC-MT5-3",
+    "broker": "IC Markets (Raw Trading Ltd)",
+    "currency": "USD",
+    "terminal_path": "C:\\Program Files\\MetaTrader 5 - 1\\terminal64.exe",
+    "magic_number": 888992,
+    "max_aggregate_lot": 0.1,
+    "max_single_trade_lot": 0.03,
+    "max_concurrent_positions": 3,
+    "scaling_strategy": "AI_DYNAMIC_PYRAMID",
+    "daily_target": 10000.0,
+    "daily_max_loss": 500000.0,
+    "is_active": true
+  },
+  "acc_3": {
+    "name": "GTCGlobalSA-Server 2",
+    "trader_name": "Jadhav Vedant",
+    "login": 52126429,
+    "server": "GTCGlobalSA-Server 2",
+    "broker": "GTC Global SA (Pty) Ltd",
+    "currency": "USD",
+    "terminal_path": "C:\\Program Files\\MetaTrader 5 - 2\\terminal64.exe",
+    "magic_number": 888993,
+    "max_aggregate_lot": 0.02,
+    "max_single_trade_lot": 0.02,
+    "max_concurrent_positions": 1,
+    "scaling_strategy": "AI_DYNAMIC_PYRAMID",
+    "daily_target": 55000.0,
+    "daily_max_loss": 500.0,
+    "is_active": true
+  }
+}

@@ -1,0 +1,402 @@
+[
+  {
+    "rule_id": "RULE_AUTO_20261007_165437",
+    "timestamp": "2026-10-07T11:24:37.883712+00:00",
+    "trigger": "POST_MORTEM_TICKET_337612766",
+    "failure_analysis": "Trade #337612766 (BUY @ $4132.34) failed at $4127.00 (Loss: -$10.68). DXY: 102.322, US10Y: 0%. Price violated key invalidation level. Pre-trade thesis directional assumption failed.",
+    "lesson": "Market structure shifted prior to entry or local momentum overpowered technical setup.",
+    "corrective_action": "Ensure multi-timeframe alignment (H1 + M15 + M5) and at least 4/6 Council agreement before execution."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261007_165437",
+    "timestamp": "2026-10-07T11:24:37.624627+00:00",
+    "trigger": "POST_MORTEM_TICKET_337612742",
+    "failure_analysis": "Trade #337612742 (BUY @ $4132.11) failed at $4126.91 (Loss: -$15.75). DXY: 102.322, US10Y: 0%. Price violated key invalidation level. Pre-trade thesis directional assumption failed.",
+    "lesson": "Market structure shifted prior to entry or local momentum overpowered technical setup.",
+    "corrective_action": "Ensure multi-timeframe alignment (H1 + M15 + M5) and at least 4/6 Council agreement before execution."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261007_163046",
+    "timestamp": "2026-10-07T11:00:46.970831+00:00",
+    "trigger": "POST_MORTEM_TICKET_337589404",
+    "failure_analysis": "Trade #337589404 stopped out via Trade Doctor Early Cut at 4130.99 (Loss: -$9.98). Proactive defense saved ~70% of initial risk by not waiting for broker hard stop loss. Adverse displacement confirmed pre-trade thesis invalidation.",
+    "lesson": "Early cut preserved capital. Acknowledge invalidation quickly and do not attempt immediate revenge re-entry.",
+    "corrective_action": "Mandatory 15-minute cognitive cooldown to allow new M5/M15 liquidity pool to form."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261007_163046",
+    "timestamp": "2026-10-07T11:00:46.748421+00:00",
+    "trigger": "POST_MORTEM_TICKET_337592939",
+    "failure_analysis": "Trade #337592939 stopped out via Trade Doctor Early Cut at 4128.96 (Loss: -$18.18). Proactive defense saved ~70% of initial risk by not waiting for broker hard stop loss. Adverse displacement confirmed pre-trade thesis invalidation.",
+    "lesson": "Early cut preserved capital. Acknowledge invalidation quickly and do not attempt immediate revenge re-entry.",
+    "corrective_action": "Mandatory 15-minute cognitive cooldown to allow new M5/M15 liquidity pool to form."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261007_051303",
+    "timestamp": "2026-10-06T23:43:03.325799+00:00",
+    "trigger": "POST_MORTEM_TICKET_337332258",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #337332258: Pre-trade analysis executed BUY at $4164.49, directly at the Resistance Ceiling / Institutional Premium zone (78.8% of range, ceiling: $4184.50). Chased breakout into supply zone without liquidity sweep (-$2.86).",
+    "lesson": "NEVER BUY AT THE RESISTANCE CEILING: Buying above 60% of range or near session high invites dealer distribution.",
+    "corrective_action": "STRICT CEILING BAN: Veto all BUY orders when price is in the upper 40% of range or within 5 pts of session high."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261007_051303",
+    "timestamp": "2026-10-06T23:43:03.094771+00:00",
+    "trigger": "POST_MORTEM_TICKET_337332256",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #337332256: Pre-trade analysis executed BUY at $4164.61, directly at the Resistance Ceiling / Institutional Premium zone (78.8% of range, ceiling: $4184.50). Chased breakout into supply zone without liquidity sweep (-$4.65).",
+    "lesson": "NEVER BUY AT THE RESISTANCE CEILING: Buying above 60% of range or near session high invites dealer distribution.",
+    "corrective_action": "STRICT CEILING BAN: Veto all BUY orders when price is in the upper 40% of range or within 5 pts of session high."
+  },
+  {
+    "rule_id": "RULE_TV_XAU_MACRO_DXY_CATALYST_03",
+    "timestamp": "2026-10-06T22:40:25.119310+00:00",
+    "trigger": "TRADINGVIEW_IDEAS_KNOWLEDGE_INGESTION",
+    "failure_analysis": "TradingView macro research: Gold rallies with highest velocity during US Dollar (DXY) softness and geopolitical tariff/rate-cut uncertainty.",
+    "lesson": "MACRO TAILWIND EXPANSION: Strongest Gold buying momentum aligns with softening DXY below 102.00 and US 10-Year Yield consolidation.",
+    "corrective_action": "Grant bonus conviction (+10 points) to Bullish Trend Pullback setups when DXY shows negative intraday momentum."
+  },
+  {
+    "rule_id": "RULE_TV_XAU_BREAKEVEN_SWING_EXPANSION_02",
+    "timestamp": "2026-10-06T22:40:25.119308+00:00",
+    "trigger": "TRADINGVIEW_IDEAS_KNOWLEDGE_INGESTION",
+    "failure_analysis": "Learned from community analysis and algorithmic autopsy. Micro-scalping for 2-3 points with premature exit on 1-minute wicks leaves 20-point runners on the table while taking repeated 4-point paper-cut losses.",
+    "lesson": "ASYMMETRIC SWING RUNNER PROTOCOL: When in profit (+2.2 pts), immediately secure Stop-Loss at Breakeven (+0.25 pts). Bank 40% partial at +4.2 pts, and let the 60% runner ride to the terminal target (75%+ of range or major High/Low).",
+    "corrective_action": "Never close 100% of a trade on 1-minute wicks. Protect capital via Breakeven lock, harvest cash partials, and trail runners behind M5/M15 swing pivots to capture big 15 to 30+ point expansions."
+  },
+  {
+    "rule_id": "RULE_TV_XAU_DYNAMIC_BREAK_RETEST_01",
+    "timestamp": "2026-10-06T22:40:25.119297+00:00",
+    "trigger": "TRADINGVIEW_IDEAS_KNOWLEDGE_INGESTION",
+    "failure_analysis": "Learned from top TradingView Gold institutional analysts (Moon-ForexAcademy, JJainy). Entering before trendline breakout and without dynamic support retest causes high-whip scalp stop-outs.",
+    "lesson": "INSTITUTIONAL BREAKOUT & RETEST ANCHOR: High-probability Long Gold expansions require a break of descending structure followed by a shallow pullback retest into the dynamic demand floor (EMA 89/55 base or H1 Order Block).",
+    "corrective_action": "Strictly enter Long only upon confirmed retest of the demand base ($4160-$4163) or confirmed volume breakout above session ceiling ($4184+). Target terminal 75%+ swing expansion."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_215843",
+    "timestamp": "2026-10-06T16:28:43.109784+00:00",
+    "trigger": "POST_MORTEM_TICKET_337094833",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #337094833: Pre-trade analysis executed BUY at $4172.92, directly at the Resistance Ceiling / Institutional Premium zone (50.0% of range, ceiling: $4176.08). Chased breakout into supply zone without liquidity sweep (-$8.94).",
+    "lesson": "NEVER BUY AT THE RESISTANCE CEILING: Buying above 60% of range or near session high invites dealer distribution.",
+    "corrective_action": "STRICT CEILING BAN: Veto all BUY orders when price is in the upper 40% of range or within 5 pts of session high."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_215842",
+    "timestamp": "2026-10-06T16:28:42.851404+00:00",
+    "trigger": "POST_MORTEM_TICKET_337094824",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #337094824: Pre-trade analysis executed BUY at $4172.58, directly at the Resistance Ceiling / Institutional Premium zone (50.0% of range, ceiling: $4176.08). Chased breakout into supply zone without liquidity sweep (-$12.18).",
+    "lesson": "NEVER BUY AT THE RESISTANCE CEILING: Buying above 60% of range or near session high invites dealer distribution.",
+    "corrective_action": "STRICT CEILING BAN: Veto all BUY orders when price is in the upper 40% of range or within 5 pts of session high."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_110515",
+    "timestamp": "2026-10-06T05:35:15.899574+00:00",
+    "trigger": "POST_MORTEM_TICKET_336616137",
+    "failure_analysis": "Trade #336616137 (BUY @ $4123.61) failed at $4116.45 (Loss: -$21.63). DXY: 102.195, US10Y: 0%. Price violated key invalidation level. Pre-trade thesis directional assumption failed.",
+    "lesson": "Market structure shifted prior to entry or local momentum overpowered technical setup.",
+    "corrective_action": "Ensure multi-timeframe alignment (H1 + M15 + M5) and at least 4/6 Council agreement before execution."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_110456",
+    "timestamp": "2026-10-06T05:34:56.992071+00:00",
+    "trigger": "POST_MORTEM_TICKET_336612845",
+    "failure_analysis": "Trade #336612845 (BUY @ $4126.33) failed at $4121.77 (Loss: -$13.83). DXY: 102.195, US10Y: 0%. Price violated key invalidation level. Pre-trade thesis directional assumption failed.",
+    "lesson": "Market structure shifted prior to entry or local momentum overpowered technical setup.",
+    "corrective_action": "Ensure multi-timeframe alignment (H1 + M15 + M5) and at least 4/6 Council agreement before execution."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_110033",
+    "timestamp": "2026-10-06T05:30:33.480186+00:00",
+    "trigger": "POST_MORTEM_TICKET_336609616",
+    "failure_analysis": "Trade #336609616 stopped out via Trade Doctor Early Cut at 4125.11 (Loss: -$6.57). Proactive defense saved ~70% of initial risk by not waiting for broker hard stop loss. Adverse displacement confirmed pre-trade thesis invalidation.",
+    "lesson": "Early cut preserved capital. Acknowledge invalidation quickly and do not attempt immediate revenge re-entry.",
+    "corrective_action": "Mandatory 15-minute cognitive cooldown to allow new M5/M15 liquidity pool to form."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_105224",
+    "timestamp": "2026-10-06T05:22:24.074867+00:00",
+    "trigger": "POST_MORTEM_TICKET_336595965",
+    "failure_analysis": "Trade #336595965 stopped out via Trade Doctor Early Cut at 4128.75 (Loss: -$4.41). Proactive defense saved ~70% of initial risk by not waiting for broker hard stop loss. Adverse displacement confirmed pre-trade thesis invalidation.",
+    "lesson": "Early cut preserved capital. Acknowledge invalidation quickly and do not attempt immediate revenge re-entry.",
+    "corrective_action": "Mandatory 15-minute cognitive cooldown to allow new M5/M15 liquidity pool to form."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_102351",
+    "timestamp": "2026-10-06T04:53:51.358495+00:00",
+    "trigger": "POST_MORTEM_TICKET_336589178",
+    "failure_analysis": "Trade #336589178 stopped out via Trade Doctor Early Cut at 4130.45 (Loss: -$6.03). Proactive defense saved ~70% of initial risk by not waiting for broker hard stop loss. Adverse displacement confirmed pre-trade thesis invalidation.",
+    "lesson": "Early cut preserved capital. Acknowledge invalidation quickly and do not attempt immediate revenge re-entry.",
+    "corrective_action": "Mandatory 15-minute cognitive cooldown to allow new M5/M15 liquidity pool to form."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095029",
+    "timestamp": "2026-10-06T04:20:29.240717+00:00",
+    "trigger": "POST_MORTEM_TICKET_336487256",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336487256: Pre-trade analysis executed SELL at $4140.49, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$5.36).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095029",
+    "timestamp": "2026-10-06T04:20:29.187559+00:00",
+    "trigger": "POST_MORTEM_TICKET_336479208",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336479208: Pre-trade analysis executed SELL at $4141.14, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$4.82).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095029",
+    "timestamp": "2026-10-06T04:20:29.153288+00:00",
+    "trigger": "POST_MORTEM_TICKET_336478093",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336478093: Pre-trade analysis executed SELL at $4140.91, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$6.14).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095029",
+    "timestamp": "2026-10-06T04:20:29.121845+00:00",
+    "trigger": "POST_MORTEM_TICKET_336477274",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336477274: Pre-trade analysis executed SELL at $4139.67, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$3.56).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095029",
+    "timestamp": "2026-10-06T04:20:29.093844+00:00",
+    "trigger": "POST_MORTEM_TICKET_336476685",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336476685: Pre-trade analysis executed SELL at $4139.60, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$3.24).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095029",
+    "timestamp": "2026-10-06T04:20:29.066459+00:00",
+    "trigger": "POST_MORTEM_TICKET_336475003",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336475003: Pre-trade analysis executed SELL at $4137.19, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$4.04).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095029",
+    "timestamp": "2026-10-06T04:20:29.039588+00:00",
+    "trigger": "POST_MORTEM_TICKET_336474242",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336474242: Pre-trade analysis executed SELL at $4136.65, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$6.24).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095029",
+    "timestamp": "2026-10-06T04:20:29.005140+00:00",
+    "trigger": "POST_MORTEM_TICKET_336471364",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336471364: Pre-trade analysis executed SELL at $4136.02, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$7.06).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.979511+00:00",
+    "trigger": "POST_MORTEM_TICKET_336469499",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336469499: Pre-trade analysis executed SELL at $4135.35, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$5.96).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.921832+00:00",
+    "trigger": "POST_MORTEM_TICKET_336458250",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336458250: Pre-trade analysis executed SELL at $4137.82, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$2.86).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.640492+00:00",
+    "trigger": "POST_MORTEM_TICKET_336562126",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336562126: Pre-trade analysis executed SELL at $4148.82, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$7.02).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.606811+00:00",
+    "trigger": "POST_MORTEM_TICKET_336554519",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336554519: Pre-trade analysis executed SELL at $4146.00, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$5.19).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.565527+00:00",
+    "trigger": "POST_MORTEM_TICKET_336550971",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336550971: Pre-trade analysis executed SELL at $4145.02, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$5.07).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.536833+00:00",
+    "trigger": "POST_MORTEM_TICKET_336548458",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336548458: Pre-trade analysis executed SELL at $4143.03, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$7.83).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.492912+00:00",
+    "trigger": "POST_MORTEM_TICKET_336545988",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336545988: Pre-trade analysis executed SELL at $4137.38, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$12.57).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.440983+00:00",
+    "trigger": "POST_MORTEM_TICKET_336528428",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336528428: Pre-trade analysis executed SELL at $4134.86, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$10.95).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.382801+00:00",
+    "trigger": "POST_MORTEM_TICKET_336504525",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336504525: Pre-trade analysis executed SELL at $4142.70, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$7.47).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.350338+00:00",
+    "trigger": "POST_MORTEM_TICKET_336502337",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336502337: Pre-trade analysis executed SELL at $4141.60, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$6.66).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.324861+00:00",
+    "trigger": "POST_MORTEM_TICKET_336501219",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336501219: Pre-trade analysis executed SELL at $4139.93, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$5.82).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.252955+00:00",
+    "trigger": "POST_MORTEM_TICKET_336488664",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336488664: Pre-trade analysis executed SELL at $4141.33, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$5.67).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.226485+00:00",
+    "trigger": "POST_MORTEM_TICKET_336487775",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336487775: Pre-trade analysis executed SELL at $4140.96, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$8.82).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.200335+00:00",
+    "trigger": "POST_MORTEM_TICKET_336486534",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336486534: Pre-trade analysis executed SELL at $4139.70, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$8.22).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.132475+00:00",
+    "trigger": "POST_MORTEM_TICKET_336479239",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336479239: Pre-trade analysis executed SELL at $4141.28, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$6.84).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.110702+00:00",
+    "trigger": "POST_MORTEM_TICKET_336478121",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336478121: Pre-trade analysis executed SELL at $4140.97, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$7.68).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.083634+00:00",
+    "trigger": "POST_MORTEM_TICKET_336477336",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336477336: Pre-trade analysis executed SELL at $4139.41, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$5.40).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.050504+00:00",
+    "trigger": "POST_MORTEM_TICKET_336476729",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336476729: Pre-trade analysis executed SELL at $4139.69, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$5.46).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095028",
+    "timestamp": "2026-10-06T04:20:28.022610+00:00",
+    "trigger": "POST_MORTEM_TICKET_336475639",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336475639: Pre-trade analysis executed SELL at $4137.26, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$7.23).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095027",
+    "timestamp": "2026-10-06T04:20:27.995450+00:00",
+    "trigger": "POST_MORTEM_TICKET_336475000",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336475000: Pre-trade analysis executed SELL at $4137.32, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$7.77).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095027",
+    "timestamp": "2026-10-06T04:20:27.967307+00:00",
+    "trigger": "POST_MORTEM_TICKET_336474237",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336474237: Pre-trade analysis executed SELL at $4136.76, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$10.11).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095027",
+    "timestamp": "2026-10-06T04:20:27.929567+00:00",
+    "trigger": "POST_MORTEM_TICKET_336471295",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336471295: Pre-trade analysis executed SELL at $4136.57, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$8.67).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095027",
+    "timestamp": "2026-10-06T04:20:27.903484+00:00",
+    "trigger": "POST_MORTEM_TICKET_336470483",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336470483: Pre-trade analysis executed SELL at $4134.07, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$11.37).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095027",
+    "timestamp": "2026-10-06T04:20:27.874398+00:00",
+    "trigger": "POST_MORTEM_TICKET_336469494",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336469494: Pre-trade analysis executed SELL at $4135.45, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$9.81).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095027",
+    "timestamp": "2026-10-06T04:20:27.811912+00:00",
+    "trigger": "POST_MORTEM_TICKET_336458225",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336458225: Pre-trade analysis executed SELL at $4137.08, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$6.42).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  },
+  {
+    "rule_id": "RULE_AUTO_20261006_095027",
+    "timestamp": "2026-10-06T04:20:27.757274+00:00",
+    "trigger": "POST_MORTEM_TICKET_336416570",
+    "failure_analysis": "FATAL LOCATION ERROR on Ticket #336416570: Pre-trade analysis executed SELL at $4128.82, directly at the Support Floor / Institutional Discount zone (36.5% of range, floor: $4102.44). The AI misread temporary pause at support as bearish breakdown. Smart money accumulated at the floor, swept retail sell stops, and bounced violently into stop loss (-$6.44).",
+    "lesson": "NEVER SELL AT THE SUPPORT FLOOR: Shorting below 40% of range or near session low has severe negative expectancy. Even with negative macro bias, institutional buyers use floor liquidity to engineer sharp reversals.",
+    "corrective_action": "STRICT FLOOR BAN: Veto all SELL orders when price is in the lower 40% of range or within 5 pts of session low. Only sell premium retracements to broken resistance or verified bearish order blocks."
+  }
+]

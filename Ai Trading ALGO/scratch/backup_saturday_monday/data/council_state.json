@@ -1,0 +1,154 @@
+{
+  "last_updated": "2026-09-21 14:25:10 UTC",
+  "symbols": {
+    "XAUUSD": {
+      "symbol": "XAUUSD",
+      "name": "GOLD (XAUUSD)",
+      "trader_name": "XAUUSD AI TRADER",
+      "master_action": "HOLD",
+      "master_action_class": "action-hold",
+      "trade_style": "STANDARD_PROP",
+      "entry_price": 0.0,
+      "stop_loss": 0.0,
+      "take_profit_1": 0.0,
+      "take_profit_2": 0.0,
+      "quorum_score": 0,
+      "vote_breakdown": "0/14 BUY",
+      "cro_lots": "#4: 0.02L",
+      "cro_status": "APPROVED",
+      "account_allocations": {},
+      "news_status": "CLEAR",
+      "news_sub": "ForexFactory Calendar Live",
+      "setup_status": "MONITORING",
+      "debate_summary": "Gold Council Split/Neutral (BUY:0, SELL:0, HOLD:14 -> 0%). Awaiting 57%+ consensus [STANDARD_PROP mode: 8/14 agents]. Standing by.",
+      "agents": [
+        {
+          "name": "SMC & ICT Specialist",
+          "icon": "\u26a1",
+          "role": "Liquidity & Order Blocks",
+          "action": "HOLD",
+          "confidence": 50,
+          "thought": "Gold_Equilibrium_Chop",
+          "tf": "M15 / H1"
+        },
+        {
+          "name": "Trend & Momentum",
+          "icon": "\ud83d\udcc8",
+          "role": "Multi-TF EMA Clouds",
+          "action": "HOLD",
+          "confidence": 50,
+          "thought": "Gold_Timeframe_Conflict",
+          "tf": "H4 / H1"
+        },
+        {
+          "name": "Mean-Reversion & Bands",
+          "icon": "\ud83c\udfaf",
+          "role": "RSI & Statistical Bands",
+          "action": "HOLD",
+          "confidence": 50,
+          "thought": "Gold_Range_Midpoint",
+          "tf": "M15"
+        },
+        {
+          "name": "Macro & News Intelligence",
+          "icon": "\ud83c\udf0d",
+          "role": "ForexFactory & Sentiment",
+          "action": "HOLD",
+          "confidence": 82,
+          "thought": "Economic calendar is clear for Gold. Macro background supports top-down bullish structure.",
+          "tf": "Macro"
+        },
+        {
+          "name": "Volume Profile & VWAP",
+          "icon": "\ud83d\udcca",
+          "role": "Intraday POC & Value Area",
+          "action": "HOLD",
+          "confidence": 50,
+          "thought": "Gold_POC_Balance",
+          "tf": "M15"
+        },
+        {
+          "name": "Supply & Demand Origin",
+          "icon": "\ud83e\uddf1",
+          "role": "Fresh Imbalance Zones",
+          "action": "HOLD",
+          "confidence": 50,
+          "thought": "Gold_No_Fresh_Zone",
+          "tf": "M15 / H1"
+        },
+        {
+          "name": "Breakout & Squeeze",
+          "icon": "\ud83d\udca5",
+          "role": "Bollinger Squeeze & ATR",
+          "action": "HOLD",
+          "confidence": 50,
+          "thought": "Gold_Compression_Pending",
+          "tf": "M15"
+        },
+        {
+          "name": "Fibonacci & Golden Pocket",
+          "icon": "\ud83d\udcd0",
+          "role": "0.618 OTE & Extensions",
+          "action": "HOLD",
+          "confidence": 50,
+          "thought": "Gold_No_Clear_Swing",
+          "tf": "H1 / M15"
+        },
+        {
+          "name": "Chart Pattern Geometry",
+          "icon": "\ud83d\udd37",
+          "role": "Classical Geometry & Wicks",
+          "action": "HOLD",
+          "confidence": 50,
+          "thought": "Gold_Symmetrical_Chop",
+          "tf": "M15"
+        },
+        {
+          "name": "Intraday Fast Scalper",
+          "icon": "\u26a1",
+          "role": "Fast EMA 9/21 Micro Thrust",
+          "action": "HOLD",
+          "confidence": 50,
+          "thought": "Gold_No_Scalp_Setup",
+          "tf": "M5 / M15"
+        },
+        {
+          "name": "Market Regime Detection",
+          "icon": "\ud83e\udded",
+          "role": "Trend vs Range vs Chop Classifier",
+          "action": "HOLD",
+          "confidence": 85,
+          "thought": "Gold is range-bound in a consolidation corridor. Strict boundaries required.",
+          "tf": "M15 / H1"
+        },
+        {
+          "name": "Liquidity & Spread Shield",
+          "icon": "\ud83d\udca7",
+          "role": "Live Spread & Slippage Gate",
+          "action": "HOLD",
+          "confidence": 85,
+          "thought": "Gold liquidity is optimal (Spread: 18.0 pts). Prime institutional execution conditions.",
+          "tf": "Microstructure"
+        },
+        {
+          "name": "Tick / Order Flow Aggressor",
+          "icon": "\u26a1",
+          "role": "Ask-Lifters vs Bid-Hitters",
+          "action": "HOLD",
+          "confidence": 85,
+          "thought": "Two-sided balanced liquidity with no significant aggressor skew.",
+          "tf": "Live Ticks"
+        },
+        {
+          "name": "Cumulative Volume Delta (CVD)",
+          "icon": "\ud83d\udcca",
+          "role": "Volume Delta & Absorption",
+          "action": "HOLD",
+          "confidence": 85,
+          "thought": "Cumulative Volume Delta is neutral with no significant volume imbalance.",
+          "tf": "M15 / M5"
+        }
+      ]
+    }
+  }
+}

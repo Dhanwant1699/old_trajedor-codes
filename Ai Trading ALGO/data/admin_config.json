@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "global_settings": {
+    "engine_active": true,
+    "global_hard_lot_cap": 0.03,
+    "max_spread_points": 40,
+    "news_filter_enabled": true,
+    "news_blackout_minutes": 15
+  },
+  "accounts": {
+    "acc_1": {
+      "id": "acc_1",
+      "name": "Account #1 (ICMarketsSC - 8065799)",
+      "holder": "AMOL AMBADAS TAWAR Tawar",
+      "login": 8065799,
+      "server": "ICMarketsSC-MT5-3",
+      "terminal_path": "C:\\Program Files\\MetaTrader 5 - 2\\terminal64.exe",
+      "currency": "USD",
+      "magic_number": 777999,
+      "mode": "STANDARD_PROP",
+      "is_active": true,
+      "max_open_trades": 2,
+      "max_lot_size": 0.03,
+      "min_lot_size": 0.01,
+      "daily_profit_target": 15000,
+      "daily_max_loss": 5000,
+      "trailing_be_r": 0.5,
+      "tp1_close_pct": 50
+    },
+    "acc_2": {
+      "id": "acc_2",
+      "name": "Account #2 (GTCGlobalSA - 52051264)",
+      "holder": "Bagul Ganesh",
+      "login": 52051264,
+      "server": "GTCGlobalSA-Server 2",
+      "terminal_path": "C:\\Program Files\\MetaTrader 5 - 3\\terminal64.exe",
+      "currency": "USD",
+      "magic_number": 778110,
+      "mode": "STANDARD_PROP",
+      "is_active": true,
+      "max_open_trades": 2,
+      "max_lot_size": 0.03,
+      "min_lot_size": 0.01,
+      "daily_profit_target": 15000,
+      "daily_max_loss": 5000,
+      "trailing_be_r": 0.5,
+      "tp1_close_pct": 50
+    },
+    "acc_3": {
+      "id": "acc_3",
+      "name": "Account #3 (GTCGlobalSA - 52053251)",
+      "holder": "amar vijay patil",
+      "login": 52053251,
+      "server": "GTCGlobalSA-Server 2",
+      "terminal_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+      "currency": "USD",
+      "magic_number": 778221,
+      "mode": "STANDARD_PROP",
+      "is_active": true,
+      "max_open_trades": 2,
+      "max_lot_size": 0.03,
+      "min_lot_size": 0.01,
+      "daily_profit_target": 15000,
+      "daily_max_loss": 5000,
+      "trailing_be_r": 0.5,
+      "tp1_close_pct": 50
+    }
+  },
+  "archived_accounts": {}
+}

@@ -1,0 +1,60 @@
+{
+  "SMC_ICT_Agent": [
+    {
+      "timestamp_utc": "2026-10-03T16:56:57.429661+00:00",
+      "trade_direction": "BUY",
+      "agent_proof": "M5 FVG bounce",
+      "diagnosed_mistake": "SMC Error: Identified an FVG/OB that was already mitigated, or traded a sweep against the higher-timeframe trend.",
+      "loss_r": -1.2
+    },
+    {
+      "timestamp_utc": "2026-10-03T16:57:09.699690+00:00",
+      "trade_direction": "BUY",
+      "agent_proof": "M5 FVG bounce",
+      "diagnosed_mistake": "SMC Error: Identified an FVG/OB that was already mitigated, or traded a sweep against the higher-timeframe trend.",
+      "loss_r": -1.2
+    }
+  ],
+  "Trend_Momentum_Agent": [],
+  "Mean_Reversion_Agent": [],
+  "Macro_News_Agent": [],
+  "VolumeProfile_VWAP_Agent": [],
+  "Supply_Demand_Agent": [],
+  "Breakout_Volatility_Agent": [
+    {
+      "timestamp_utc": "2026-10-03T16:56:57.429787+00:00",
+      "trade_direction": "BUY",
+      "agent_proof": "Bollinger squeeze breakout",
+      "diagnosed_mistake": "Breakout Error: Fell for a retail false-breakout trap; volume expansion was absent.",
+      "loss_r": -1.2
+    },
+    {
+      "timestamp_utc": "2026-10-03T16:57:09.699729+00:00",
+      "trade_direction": "BUY",
+      "agent_proof": "Bollinger squeeze breakout",
+      "diagnosed_mistake": "Breakout Error: Fell for a retail false-breakout trap; volume expansion was absent.",
+      "loss_r": -1.2
+    }
+  ],
+  "Fibonacci_GoldenPocket_Agent": [],
+  "ChartPattern_Geometry_Agent": [
+    {
+      "timestamp_utc": "2026-10-03T16:56:57.429725+00:00",
+      "trade_direction": "BUY",
+      "agent_proof": "Double bottom forming",
+      "diagnosed_mistake": "Pattern Error: Traded a textbook formation without waiting for candle body displacement/breakout confirmation.",
+      "loss_r": -1.2
+    },
+    {
+      "timestamp_utc": "2026-10-03T16:57:09.699712+00:00",
+      "trade_direction": "BUY",
+      "agent_proof": "Double bottom forming",
+      "diagnosed_mistake": "Pattern Error: Traded a textbook formation without waiting for candle body displacement/breakout confirmation.",
+      "loss_r": -1.2
+    }
+  ],
+  "Intraday_Scalping_Agent": [],
+  "Regime_Detection_Agent": [],
+  "Tick_OrderFlow_Agent": [],
+  "Volume_Delta_CVD_Agent": []
+}

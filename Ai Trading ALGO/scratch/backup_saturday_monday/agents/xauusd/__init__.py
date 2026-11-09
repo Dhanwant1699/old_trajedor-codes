@@ -1,0 +1,18 @@
+# XAUUSD AI Trader and Specialized Agent Council
+from agents.xauusd.xauusd_ai_trader import GoldMasterCoordinator as XAUUSDAITrader
+from agents.xauusd.xauusd_smc_agent import GoldSMCAgent as XAUUSDSMCAgent
+from agents.xauusd.xauusd_trend_agent import GoldTrendAgent as XAUUSDTrendAgent
+from agents.xauusd.xauusd_mean_reversion_agent import GoldMeanReversionAgent as XAUUSDMeanReversionAgent
+from agents.xauusd.xauusd_macro_agent import GoldMacroAgent as XAUUSDMacroAgent
+from agents.xauusd.xauusd_orderflow_agent import GoldOrderFlowAgent as XAUUSDOrderFlowAgent
+from agents.xauusd.xauusd_supply_demand_agent import GoldSupplyDemandAgent as XAUUSDSupplyDemandAgent
+from agents.xauusd.xauusd_breakout_agent import GoldBreakoutAgent as XAUUSDBreakoutAgent
+from agents.xauusd.xauusd_fibonacci_agent import GoldFibonacciAgent as XAUUSDFibonacciAgent
+from agents.xauusd.xauusd_pattern_agent import GoldChartPatternAgent as XAUUSDChartPatternAgent
+from agents.xauusd.xauusd_scalping_agent import GoldScalpingAgent as XAUUSDScalpingAgent
+from agents.xauusd.xauusd_regime_agent import GoldRegimeDetectionAgent as XAUUSDRegimeAgent
+from agents.xauusd.xauusd_liquidity_agent import GoldLiquidityExecutionAgent as XAUUSDLiquidityAgent
+from agents.xauusd.xauusd_tick_flow_agent import GoldTickOrderFlowAgent as XAUUSDTickFlowAgent
+from agents.xauusd.xauusd_volume_delta_agent import GoldVolumeDeltaAgent as XAUUSDVolumeDeltaAgent
+from agents.xauusd.xauusd_risk_agent import GoldChiefRiskOfficerAgent as XAUUSDChiefRiskOfficer
+from agents.xauusd.xauusd_position_manager_agent import GoldPositionManagerAgent as XAUUSDPositionManagerAgent

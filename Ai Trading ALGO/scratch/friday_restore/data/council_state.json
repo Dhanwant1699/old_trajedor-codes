@@ -1,0 +1,24 @@
+{
+  "last_updated": "2026-09-17 15:45:00 UTC",
+  "symbols": {
+    "XAUUSD": {
+      "symbol": "XAUUSD",
+      "name": "GOLD (XAUUSD)",
+      "master_action": "BUY",
+      "master_action_class": "action-buy",
+      "entry_price": 4363.5,
+      "stop_loss": 4355.0,
+      "take_profit_1": 4376.5,
+      "take_profit_2": 4385.0,
+      "quorum_score": 92,
+      "vote_breakdown": "9/10 BUY",
+      "cro_lots": "0.07 Lots",
+      "cro_status": "APPROVED",
+      "news_status": "CLEAR",
+      "news_sub": "ForexFactory Calendar Live",
+      "setup_status": "IN_TRADE",
+      "status_note": "4 Positions Active in Profit (+€39.46)",
+      "debate_summary": "Strong Bullish 5-Minute (M5) Trend Continuation on Gold. Higher Lows structure confirmed across 5 consecutive M5 candles above dynamic EMA 9/21 support."
+    }
+  }
+}

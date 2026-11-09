@@ -1,0 +1,132 @@
+{
+  "SMC_ICT_Agent": {
+    "total_votes": 2,
+    "correct_votes": 0,
+    "incorrect_votes": 2,
+    "win_rate_pct": 0.0,
+    "voting_weight": 0.77,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 2,
+    "last_updated_utc": "2026-10-03T16:57:09.699701+00:00"
+  },
+  "Trend_Momentum_Agent": {
+    "total_votes": 2,
+    "correct_votes": 2,
+    "incorrect_votes": 0,
+    "win_rate_pct": 100.0,
+    "voting_weight": 1.17,
+    "status": "ACTIVE",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:57:09.699724+00:00"
+  },
+  "Mean_Reversion_Agent": {
+    "total_votes": 0,
+    "correct_votes": 0,
+    "incorrect_votes": 0,
+    "win_rate_pct": 50.0,
+    "voting_weight": 1.0,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:56:57.402178+00:00"
+  },
+  "Macro_News_Agent": {
+    "total_votes": 0,
+    "correct_votes": 0,
+    "incorrect_votes": 0,
+    "win_rate_pct": 50.0,
+    "voting_weight": 1.0,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:56:57.402179+00:00"
+  },
+  "VolumeProfile_VWAP_Agent": {
+    "total_votes": 0,
+    "correct_votes": 0,
+    "incorrect_votes": 0,
+    "win_rate_pct": 50.0,
+    "voting_weight": 1.0,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:56:57.402181+00:00"
+  },
+  "Supply_Demand_Agent": {
+    "total_votes": 0,
+    "correct_votes": 0,
+    "incorrect_votes": 0,
+    "win_rate_pct": 50.0,
+    "voting_weight": 1.0,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:56:57.402182+00:00"
+  },
+  "Breakout_Volatility_Agent": {
+    "total_votes": 2,
+    "correct_votes": 0,
+    "incorrect_votes": 2,
+    "win_rate_pct": 0.0,
+    "voting_weight": 0.77,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 2,
+    "last_updated_utc": "2026-10-03T16:57:09.699732+00:00"
+  },
+  "Fibonacci_GoldenPocket_Agent": {
+    "total_votes": 0,
+    "correct_votes": 0,
+    "incorrect_votes": 0,
+    "win_rate_pct": 50.0,
+    "voting_weight": 1.0,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:56:57.402185+00:00"
+  },
+  "ChartPattern_Geometry_Agent": {
+    "total_votes": 2,
+    "correct_votes": 0,
+    "incorrect_votes": 2,
+    "win_rate_pct": 0.0,
+    "voting_weight": 0.77,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 2,
+    "last_updated_utc": "2026-10-03T16:57:09.699716+00:00"
+  },
+  "Intraday_Scalping_Agent": {
+    "total_votes": 0,
+    "correct_votes": 0,
+    "incorrect_votes": 0,
+    "win_rate_pct": 50.0,
+    "voting_weight": 1.0,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:56:57.402188+00:00"
+  },
+  "Regime_Detection_Agent": {
+    "total_votes": 0,
+    "correct_votes": 0,
+    "incorrect_votes": 0,
+    "win_rate_pct": 50.0,
+    "voting_weight": 1.0,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:56:57.402191+00:00"
+  },
+  "Tick_OrderFlow_Agent": {
+    "total_votes": 0,
+    "correct_votes": 0,
+    "incorrect_votes": 0,
+    "win_rate_pct": 50.0,
+    "voting_weight": 1.0,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:56:57.402193+00:00"
+  },
+  "Volume_Delta_CVD_Agent": {
+    "total_votes": 0,
+    "correct_votes": 0,
+    "incorrect_votes": 0,
+    "win_rate_pct": 50.0,
+    "voting_weight": 1.0,
+    "status": "ACTIVE_STUDENT",
+    "consecutive_losses": 0,
+    "last_updated_utc": "2026-10-03T16:56:57.402194+00:00"
+  }
+}

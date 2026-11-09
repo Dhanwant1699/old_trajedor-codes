@@ -1,0 +1,3205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAJEDOR // Living Cerebral AI Nervous System</title>
+    <!-- Modern Sleek Typography: Outfit & JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-void: #02050e;
+            --bg-deep: #050d24;
+            --neural-cyan: #00f0ff;
+            --neural-blue: #38bdf8;
+            --neural-gold: #fbbf24;
+            --neural-purple: #c084fc;
+            --neural-rose: #f43f5e;
+            --neural-emerald: #10b981;
+            --glass-card: rgba(6, 14, 34, 0.72);
+            --glass-border: rgba(56, 189, 248, 0.2);
+            --font-display: 'Outfit', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-void);
+            background-image: 
+                radial-gradient(ellipse at 50% 40%, rgba(14, 165, 233, 0.16) 0%, transparent 65%),
+                radial-gradient(ellipse at 85% 75%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 15% 75%, rgba(192, 132, 252, 0.09) 0%, transparent 50%),
+                radial-gradient(circle at 50% 100%, #010309 0%, transparent 100%);
+            color: #f1f5f9;
+            font-family: var(--font-display);
+            min-height: 100vh;
+            padding: 14px 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Cosmic Room Glow */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            box-shadow: inset 0 0 130px rgba(2, 132, 199, 0.2);
+            pointer-events: none;
+            z-index: 998;
+        }
+
+        /* ========================================================================= */
+        /* TOP NAVIGATION HEADER                                                     */
+        /* ========================================================================= */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 22px;
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            backdrop-filter: blur(28px);
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 240, 255, 0.06);
+        }
+
+        .brand-cluster {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-symbol {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #00f0ff, #0284c7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 16px rgba(0, 240, 255, 0.45);
+        }
+
+        .brand-symbol svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+
+        .brand-title {
+            font-size: 19px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .brand-title span {
+            color: var(--neural-cyan);
+            font-weight: 400;
+            font-size: 13px;
+        }
+
+        .badge-synapse {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--neural-cyan);
+            letter-spacing: 1px;
+        }
+
+        /* Modern Pill Navigation Tabs */
+        .deck-navigation {
+            display: flex;
+            background: rgba(2, 6, 18, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 4px;
+            gap: 4px;
+        }
+
+        .deck-tab {
+            background: transparent;
+            border: none;
+            border-radius: 20px;
+            padding: 6px 16px;
+            color: #94a3af;
+            font-family: var(--font-display);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .deck-tab .beacon {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #64748b;
+            transition: all 0.25s;
+        }
+
+        .deck-tab:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .deck-tab.active-tab {
+            color: #fff;
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.22), rgba(2, 132, 199, 0.4));
+            border: 1px solid rgba(0, 240, 255, 0.45);
+            box-shadow: 0 0 16px rgba(0, 240, 255, 0.3);
+        }
+
+        .deck-tab.active-tab .beacon {
+            background: var(--neural-cyan);
+            box-shadow: 0 0 8px var(--neural-cyan);
+        }
+
+        .header-metrics-deck {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pill-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pill-gold {
+            background: rgba(251, 191, 36, 0.1);
+            border-color: rgba(251, 191, 36, 0.4);
+            color: var(--neural-gold);
+            box-shadow: 0 0 10px rgba(251, 191, 36, 0.2);
+        }
+
+        .pill-emerald {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.4);
+            color: var(--neural-emerald);
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+        }
+
+        .pill-cyan {
+            background: rgba(0, 240, 255, 0.08);
+            border-color: rgba(0, 240, 255, 0.35);
+            color: var(--neural-cyan);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        /* ========================================================================= */
+        /* PAGE 1: THE LIVING CEREBRAL NERVOUS SYSTEM                                */
+        /* ========================================================================= */
+        .stage-view {
+            display: none;
+            animation: fadeInDeck 0.35s ease forwards;
+        }
+
+        .stage-view.active-stage {
+            display: block;
+        }
+
+        @keyframes fadeInDeck {
+            from { opacity: 0; transform: scale(0.995); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .cortex-arena {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 105px);
+            min-height: 740px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 50%, #06112d 0%, #030816 65%, #010309 100%);
+            border: 1px solid rgba(56, 189, 248, 0.22);
+            box-shadow: inset 0 0 90px rgba(0, 240, 255, 0.08), 0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        #nervousSystemCanvas {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 1;
+        }
+
+        /* Floating Translucent Glass Telemetry Cards */
+        .cortex-card {
+            position: absolute;
+            z-index: 10;
+            background: rgba(6, 15, 38, 0.72);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 14px;
+            backdrop-filter: blur(28px);
+            padding: 16px 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 240, 255, 0.03);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cortex-card:hover {
+            border-color: rgba(0, 240, 255, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 30px rgba(0, 240, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .card-optic {
+            top: 20px;
+            left: 24px;
+            width: 310px;
+            border-left: 3px solid var(--neural-cyan);
+        }
+        .card-news {
+            top: 210px;
+            left: 24px;
+            width: 310px;
+            border-left: 3px solid var(--neural-rose);
+        }
+        .card-memory {
+            top: 400px;
+            left: 24px;
+            width: 310px;
+            border-left: 3px solid var(--neural-purple);
+        }
+
+        .card-macro {
+            top: 20px;
+            right: 24px;
+            width: 320px;
+            border-right: 3px solid var(--neural-gold);
+        }
+        .card-emotion {
+            top: 210px;
+            right: 24px;
+            width: 320px;
+            border-right: 3px solid #e879f9;
+        }
+        .card-defense {
+            top: 400px;
+            right: 24px;
+            width: 320px;
+            border-right: 3px solid var(--neural-emerald);
+        }
+
+        .card-mt5-fleet {
+            bottom: 64px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 640px;
+            max-width: 90%;
+            border-bottom: 3px solid var(--neural-blue);
+        }
+
+        .card-bottom-subtitles {
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 86%;
+            max-width: 1040px;
+            text-align: center;
+            padding: 8px 18px;
+        }
+
+        .card-title-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .card-heading {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-heading .pulsar {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--neural-cyan);
+            box-shadow: 0 0 10px var(--neural-cyan);
+        }
+
+        .chip-label {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 12px;
+            padding: 2px 8px;
+            font-size: 10px;
+            font-family: var(--font-mono);
+            color: var(--neural-cyan);
+        }
+
+        .datum-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 9px;
+            font-size: 12px;
+        }
+
+        .datum-name {
+            color: #94a3af;
+        }
+
+        .datum-val {
+            font-family: var(--font-mono);
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .monologue-flow {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--neural-blue);
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .monologue-flow::before {
+            content: "•";
+            color: var(--neural-cyan);
+            font-size: 16px;
+            animation: pulseGlow 1.2s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            from { opacity: 0.3; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1.4); }
+        }
+
+        /* Generic Panels for Other Decks */
+        .deck-layout-3 {
+            display: grid;
+            grid-template-columns: 340px 1fr 340px;
+            gap: 16px;
+        }
+
+        .deck-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .frosted-panel {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            backdrop-filter: blur(28px);
+            padding: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        th {
+            font-family: var(--font-display);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--neural-cyan);
+            letter-spacing: 1px;
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-family: var(--font-mono);
+            font-size: 11px;
+        }
+
+        tr:hover {
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        .btn-intercom {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.25), rgba(2, 132, 199, 0.45));
+            border: 1px solid var(--neural-cyan);
+            border-radius: 10px;
+            color: #fff;
+            padding: 10px 20px;
+            font-family: var(--font-display);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+            width: 100%;
+        }
+
+        .btn-intercom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.4), rgba(2, 132, 199, 0.6));
+        }
+
+        /* Account Risk Governance & Lot Allocation Controls */
+        .account-control-card {
+            background: rgba(2, 6, 20, 0.65);
+            border: 1px solid rgba(56, 189, 248, 0.22);
+            border-radius: 14px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+        }
+        .account-control-card:hover {
+            border-color: rgba(0, 240, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.1);
+        }
+        .risk-input-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 9px;
+            font-size: 11px;
+        }
+        .risk-input-label {
+            color: #94a3af;
+            font-weight: 500;
+        }
+        .risk-input-field {
+            background: rgba(4, 12, 32, 0.95);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 6px;
+            padding: 5px 8px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff;
+            width: 86px;
+            text-align: right;
+            transition: all 0.2s;
+            -webkit-appearance: none !important;
+            -moz-appearance: textfield !important;
+            appearance: textfield !important;
+        }
+        .risk-input-field::-webkit-outer-spin-button,
+        .risk-input-field::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0 !important;
+            display: none !important;
+        }
+        .risk-input-field:focus {
+            outline: none;
+            border-color: var(--neural-cyan);
+            box-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
+            background: rgba(4, 12, 32, 1);
+        }
+        .risk-select-field {
+            background: rgba(4, 12, 32, 0.85);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 6px;
+            padding: 5px 8px;
+            font-family: var(--font-display);
+            font-size: 11px;
+            color: var(--neural-cyan);
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+        .btn-save-limits {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(2, 132, 199, 0.35));
+            border: 1px solid var(--neural-cyan);
+            border-radius: 8px;
+            color: #fff;
+            padding: 8px 12px;
+            font-family: var(--font-display);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.25s;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 10px;
+        }
+        .btn-save-limits:hover {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.4), rgba(2, 132, 199, 0.6));
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            transform: translateY(-1px);
+        }
+        .meter-bar-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 4px;
+            margin-bottom: 12px;
+        }
+        .meter-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--neural-cyan), var(--neural-emerald));
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+        /* ===== ON/OFF POWER TOGGLE BUTTON ===== */
+        .power-toggle-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 10px 5px 8px;
+            border-radius: 20px;
+            border: 1.5px solid var(--neural-emerald);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(5, 150, 105, 0.4));
+            color: var(--neural-emerald);
+            font-family: var(--font-display);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .power-toggle-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .power-toggle-btn:hover::before { opacity: 1; }
+        .power-toggle-btn:hover {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+            transform: scale(1.04);
+        }
+        .power-toggle-btn.is-off {
+            border-color: var(--neural-rose);
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.2), rgba(190, 18, 60, 0.35));
+            color: var(--neural-rose);
+            box-shadow: 0 0 10px rgba(244, 63, 94, 0.25);
+        }
+        .power-toggle-btn.is-off:hover {
+            box-shadow: 0 0 20px rgba(244, 63, 94, 0.5);
+        }
+        .pwr-icon {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+            flex-shrink: 0;
+            animation: pwr-pulse 2s ease-in-out infinite;
+        }
+        .is-off .pwr-icon {
+            animation: none;
+            opacity: 0.7;
+        }
+        @keyframes pwr-pulse {
+            0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px currentColor); }
+            50% { opacity: 0.6; filter: none; }
+        }
+        .account-control-card.is-disarmed {
+            opacity: 0.55;
+            border-color: rgba(244, 63, 94, 0.3);
+        }
+        .account-control-card.is-disarmed .meter-bar-fill {
+            background: linear-gradient(90deg, #64748b, #94a3af);
+        }
+        .btn-scan-terminals {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 95, 70, 0.4));
+            border: 1px solid var(--neural-emerald);
+            border-radius: 6px;
+            color: #6ee7b7;
+            padding: 6px 14px;
+            font-family: var(--font-display);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .btn-scan-terminals:hover {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(6, 95, 70, 0.6));
+            box-shadow: 0 0 14px rgba(16, 185, 129, 0.4);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        .scan-icon {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+            transition: transform 0.5s ease;
+        }
+        .btn-scan-terminals.scanning .scan-icon {
+            animation: spin 0.8s linear infinite;
+        }
+        /* ========================================================================= */
+        /* PAGE 6: 6-SCREEN MULTI-TIMEFRAME MATRIX STYLES                            */
+        /* ========================================================================= */
+        .mtf-deck-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+        .mtf-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 12px 20px;
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            backdrop-filter: blur(24px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+        .mtf-toolbar-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .mtf-title {
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mtf-title span {
+            color: var(--neural-cyan);
+            font-weight: 500;
+            font-size: 12px;
+        }
+        .mtf-presets {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .btn-preset {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            color: #94a3af;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn-preset:hover, .btn-preset.active-preset {
+            background: rgba(0, 240, 255, 0.15);
+            border-color: var(--neural-cyan);
+            color: #fff;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.25);
+        }
+        .mtf-custom-sym {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .mtf-sym-input {
+            background: rgba(2, 6, 20, 0.85);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 8px;
+            padding: 5px 10px;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: #fff;
+            width: 140px;
+            text-transform: uppercase;
+        }
+        .mtf-sym-input:focus {
+            outline: none;
+            border-color: var(--neural-cyan);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+        }
+        .mtf-grid-6 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            width: 100%;
+        }
+        @media (max-width: 1300px) {
+            .mtf-grid-6 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 800px) {
+            .mtf-grid-6 {
+                grid-template-columns: 1fr;
+            }
+        }
+        .mtf-screen-card {
+            background: rgba(4, 10, 28, 0.88);
+            border: 1px solid rgba(56, 189, 248, 0.22);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 410px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+            position: relative;
+        }
+        .mtf-screen-card:hover {
+            border-color: rgba(0, 240, 255, 0.45);
+            box-shadow: 0 12px 32px rgba(0, 240, 255, 0.12);
+        }
+        .mtf-screen-card.maximized {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            height: calc(100vh - 30px) !important;
+            z-index: 9999;
+            box-shadow: 0 0 80px rgba(0, 240, 255, 0.4);
+            border-color: var(--neural-cyan);
+        }
+        .mtf-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 14px;
+            background: rgba(5, 13, 36, 0.96);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.18);
+        }
+        .mtf-badge-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mtf-tf-pill {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
+        .pill-m1 { background: rgba(244, 63, 94, 0.15); border: 1px solid rgba(244, 63, 94, 0.4); color: #f43f5e; }
+        .pill-m5 { background: rgba(251, 191, 36, 0.15); border: 1px solid rgba(251, 191, 36, 0.4); color: #fbbf24; }
+        .pill-m15 { background: rgba(0, 240, 255, 0.15); border: 1px solid rgba(0, 240, 255, 0.4); color: #00f0ff; }
+        .pill-h1 { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #10b981; }
+        .pill-h4 { background: rgba(192, 132, 252, 0.15); border: 1px solid rgba(192, 132, 252, 0.4); color: #c084fc; }
+        .pill-d1 { background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; }
+        .mtf-card-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #cbd5e1;
+            letter-spacing: 0.5px;
+        }
+        .mtf-card-actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-card-action {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3af;
+            border-radius: 6px;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+        .btn-card-action:hover {
+            background: rgba(0, 240, 255, 0.2);
+            color: #fff;
+            border-color: var(--neural-cyan);
+        }
+        .mtf-card-body {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: #060913;
+        }
+        .mtf-card-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================================================= -->
+    <!-- TOP NAVIGATION HEADER                                                     -->
+    <!-- ========================================================================= -->
+    <header>
+        <div class="brand-cluster">
+            <div class="brand-symbol">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <div class="brand-title">
+                TRAJEDOR <span>// NERVOUS CORE</span>
+            </div>
+            <div class="badge-synapse">Z.E.R.O. v85.8</div>
+        </div>
+
+        <nav class="deck-navigation">
+            <button class="deck-tab active-tab" onclick="switchStage('stage-core')">
+                <span class="beacon"></span>
+                <span>01 // CEREBRAL NERVOUS SYSTEM</span>
+            </button>
+            <button class="deck-tab" onclick="switchStage('stage-cockpit')">
+                <span class="beacon"></span>
+                <span>02 // COUNCIL WAR ROOM</span>
+            </button>
+            <button class="deck-tab" onclick="switchStage('stage-doctor')">
+                <span class="beacon"></span>
+                <span>03 // TRADE DOCTOR</span>
+            </button>
+            <button class="deck-tab" onclick="switchStage('stage-autopsy')">
+                <span class="beacon"></span>
+                <span>04 // AUTOPSY LAB</span>
+            </button>
+            <button class="deck-tab" onclick="switchStage('stage-vault')">
+                <span class="beacon"></span>
+                <span>05 // TERMINALS</span>
+            </button>
+            <button class="deck-tab" onclick="switchStage('stage-mtf')">
+                <span class="beacon"></span>
+                <span>06 // 6-SCREEN MATRIX</span>
+            </button>
+        </nav>
+
+        <div class="header-metrics-deck">
+            <div class="pill-stat pill-gold" id="top-price-pill">
+                <span>XAU/USD: $4,139.52</span>
+            </div>
+            <div class="pill-stat pill-emerald" id="top-regime-pill">
+                <span>METAMORPHOSIS: READY</span>
+            </div>
+            <div class="pill-stat pill-cyan">
+                <span id="header-clock">00:00:00 UTC</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- PAGE 1: THE LIVING CEREBRAL AI NERVOUS SYSTEM                             -->
+    <!-- ========================================================================= -->
+    <div id="stage-core" class="stage-view active-stage">
+        <div class="cortex-arena">
+            <!-- Full Interactive Anatomical Neural Canvas -->
+            <canvas id="nervousSystemCanvas"></canvas>
+
+            <!-- Ganglion 1: Optic Sensory Nerve (Top-Left) -->
+            <div class="cortex-card card-optic" id="ganglion-optic">
+                <div class="card-title-line">
+                    <span class="card-heading">
+                        <span class="pulsar" style="background: var(--neural-cyan); box-shadow: 0 0 10px var(--neural-cyan);"></span>
+                        OPTIC SENSORY CORTEX
+                    </span>
+                    <span class="chip-label" style="color: var(--neural-cyan);">SMC M5 FEED</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">XAU/USD Live Tick:</span>
+                    <span class="datum-val" id="cortex-tick-val" style="color: var(--neural-gold);">$4,139.52</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Bearish Order Block:</span>
+                    <span class="datum-val" style="color: var(--neural-rose);">$4,156.02 - $4,161.52</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Bullish Fair Value Gap:</span>
+                    <span class="datum-val" style="color: var(--neural-emerald);">$4,132.10 - $4,136.40</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Structure Regime:</span>
+                    <span class="datum-val" style="color: var(--neural-cyan);">CHOCH / LIQUIDITY SWEEP</span>
+                </div>
+            </div>
+
+            <!-- Ganglion 2: Acoustic Intel Nerve (Mid-Left) -->
+            <div class="cortex-card card-news" id="ganglion-news">
+                <div class="card-title-line">
+                    <span class="card-heading">
+                        <span class="pulsar" style="background: var(--neural-rose); box-shadow: 0 0 10px var(--neural-rose);"></span>
+                        ACOUSTIC INTEL NERVE
+                    </span>
+                    <span class="chip-label" style="color: var(--neural-rose);">NEWS &amp; FED WIRES</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Google &amp; FXStreet:</span>
+                    <span class="datum-val" style="color: #fca5a5; font-size: 10px;">Fed Hawkish • Geopolitical Bid</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Inbound Risk Event:</span>
+                    <span class="datum-val" style="color: var(--neural-gold);">CPI / Non-Farm Payrolls</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Sentiment Impact:</span>
+                    <span class="datum-val" style="color: var(--neural-cyan);">MODERATE BULLISH (+28)</span>
+                </div>
+            </div>
+
+            <!-- Ganglion 3: Hippocampus Episodic Memory (Bottom-Left) -->
+            <div class="cortex-card card-memory" id="ganglion-memory">
+                <div class="card-title-line">
+                    <span class="card-heading">
+                        <span class="pulsar" style="background: var(--neural-purple); box-shadow: 0 0 10px var(--neural-purple);"></span>
+                        HIPPOCAMPUS MEMORY
+                    </span>
+                    <span class="chip-label" style="color: var(--neural-purple);">OCT 1/2 AUTOPSY</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Memory Gate Status:</span>
+                    <span class="datum-val" id="cortex-gate" style="color: var(--neural-emerald);">APPROVED (CLEAR)</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Bottom-Sell Rule:</span>
+                    <span class="datum-val" style="color: var(--neural-purple);">ENFORCED (No Discount Short)</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Episodic DB Archive:</span>
+                    <span class="datum-val" style="color: #cbd5e1;">trade_history.db (Armed)</span>
+                </div>
+            </div>
+
+            <!-- Ganglion 4: Macro Somatosensory Nerve (Top-Right) -->
+            <div class="cortex-card card-macro" id="ganglion-macro">
+                <div class="card-title-line">
+                    <span class="card-heading">
+                        <span class="pulsar" style="background: var(--neural-gold); box-shadow: 0 0 10px var(--neural-gold);"></span>
+                        MACRO SOMATOSENSORY
+                    </span>
+                    <span class="chip-label" style="color: var(--neural-gold);">GLOBAL VECTORS</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">US Dollar (DXY):</span>
+                    <span class="datum-val" id="cortex-dxy" style="color: var(--neural-cyan);">101.92 (-0.01%)</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">US 10Y Treasury Yield:</span>
+                    <span class="datum-val" id="cortex-us10y" style="color: var(--neural-gold);">5.277% (+0.76%)</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">WTI Crude Oil:</span>
+                    <span class="datum-val" id="cortex-oil" style="color: #cbd5e1;">$91.11 (-1.90%)</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Macro Pressure Vector:</span>
+                    <span class="datum-val" style="color: var(--neural-rose);">YIELDS EXERTING FRICTION</span>
+                </div>
+            </div>
+
+            <!-- Ganglion 5: Endocrine Emotion Sentinel (Mid-Right) -->
+            <div class="cortex-card card-emotion" id="ganglion-emotion">
+                <div class="card-title-line">
+                    <span class="card-heading">
+                        <span class="pulsar" style="background: #e879f9; box-shadow: 0 0 10px #e879f9;"></span>
+                        ENDOCRINE EMOTION
+                    </span>
+                    <span class="chip-label" style="color: #e879f9;">HERD TRAP DETECTED</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Retail Sentiment Ratio:</span>
+                    <span class="datum-val" id="cortex-sentiment" style="color: var(--neural-rose);">71.4% LONG</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Crowd Psychology:</span>
+                    <span class="datum-val" style="color: #fca5a5;">EXTREME EUPHORIA (TRAPPED)</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Smart Money Liquidity:</span>
+                    <span class="datum-val" style="color: var(--neural-cyan);">Targeting Stops @ $4,127.52</span>
+                </div>
+            </div>
+
+            <!-- Ganglion 6: Trade Doctor Defense Tract (Bottom-Right) -->
+            <div class="cortex-card card-defense" id="ganglion-defense">
+                <div class="card-title-line">
+                    <span class="card-heading">
+                        <span class="pulsar" style="background: var(--neural-emerald); box-shadow: 0 0 10px var(--neural-emerald);"></span>
+                        TRADE DOCTOR DEFENSE
+                    </span>
+                    <span class="chip-label" style="color: var(--neural-emerald);">ACTIVE REFLEX</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Early Cut Invalidation:</span>
+                    <span class="datum-val" style="color: var(--neural-rose); font-weight: 700;">-0.30 R Hard Cut</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Capital Preserved:</span>
+                    <span class="datum-val" style="color: var(--neural-gold);">+€148.60 (70% Risk Saved)</span>
+                </div>
+                <div class="datum-row">
+                    <span class="datum-name">Breakeven Safety Lock:</span>
+                    <span class="datum-val" style="color: var(--neural-emerald);">+0.75 R Secure Pivot</span>
+                </div>
+            </div>
+
+            <!-- Ganglion 7: Efferent Motor Trunk (Tri-Terminal MT5 Fleet) (Bottom-Center) -->
+            <div class="cortex-card card-mt5-fleet" id="ganglion-mt5">
+                <div class="card-title-line" style="margin-bottom: 8px;">
+                    <span class="card-heading">
+                        <span class="pulsar" style="background: var(--neural-blue); box-shadow: 0 0 10px var(--neural-blue);"></span>
+                        EFFERENT MOTOR TRUNK // LIVE DETECTED MT5 FLEET
+                    </span>
+                    <span class="chip-label" style="color: var(--neural-cyan);" id="cortex-fleet-badge">DISCOVERED TERMINALS</span>
+                </div>
+                <div id="cortex-accounts-strip" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; font-size: 11px;">
+                    <div style="color: #64748b; font-size: 11px;">Detecting running terminals...</div>
+                </div>
+            </div>
+
+            <!-- Floating Bottom Subtitle Transcript -->
+            <div class="cortex-card card-bottom-subtitles">
+                <div class="monologue-flow" id="cortex-monologue">
+                    JARVIS Cognition: Whole Trajedor Cerebral Nervous System synchronized. Live M5 ticks, news feeds, crowd traps, and memory gates actively streaming through neural synapses. Standing by for sniper trigger.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- PAGE 2: WAR ROOM COCKPIT (SMC CHART, EXECUTION, INTERNAL MONOLOGUE)         -->
+    <!-- ========================================================================= -->
+    <div id="stage-cockpit" class="stage-view">
+        <!-- ========================================================================= -->
+        <!-- COUNCIL WAR ROOM: HERO DELIBERATION CHAMBER (6 AGENTS TALKING LIVE)       -->
+        <!-- ========================================================================= -->
+        <div class="frosted-panel" style="margin-bottom: 16px; border: 1px solid rgba(0, 240, 255, 0.35); background: radial-gradient(circle at top, rgba(14, 165, 233, 0.08), rgba(2, 6, 23, 0.98)); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 240, 255, 0.1);">
+            <div class="card-title-line" style="margin-bottom: 14px; border-bottom: 1px solid rgba(56, 189, 248, 0.15); padding-bottom: 10px;">
+                <div>
+                    <span class="card-heading" style="color: var(--neural-cyan); letter-spacing: 1.5px; font-weight: 800; font-size: 14px;">
+                        <span class="pulsar" style="background: var(--neural-cyan); box-shadow: 0 0 12px var(--neural-cyan);"></span>
+                        🏛️ COUNCIL WAR ROOM // MULTI-AGENT ROUNDTABLE DELIBERATION CHAMBER
+                    </span>
+                    <div style="font-size: 11px; color: #94a3af; margin-top: 4px;">
+                        Live multi-timeframe cross-examination: Agents autonomously scan all timeframes (1W to M1), pitch trade setups, and vote in consensus.
+                    </div>
+                </div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <span class="chip-label" id="warroom-pitch-pill" style="color: var(--neural-cyan); border-color: var(--neural-cyan); font-weight: 700; font-size: 11px;">STANDBY</span>
+                    <span class="chip-label" id="warroom-consensus-pill" style="color: var(--neural-gold); border-color: var(--neural-gold); font-weight: 700; font-size: 11px;">0% CONSENSUS</span>
+                    <span class="chip-label" id="warroom-action-pill" style="color: #94a3af; border-color: #475569; font-weight: 800; font-size: 12px; padding: 4px 12px;">STANDBY</span>
+                </div>
+            </div>
+
+            <!-- 6 AGENT PODS (AUTONOMOUS TIME-FRAME SPECIALISTS & LIVE VOTING) -->
+            <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 16px;">
+                <!-- Pod 1 -->
+                <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(251, 191, 36, 0.35); border-radius: 10px; padding: 12px 10px; text-align: center;">
+                    <div style="font-size: 11px; color: var(--neural-gold); font-weight: 800; letter-spacing: 0.5px;">MACRO SENTINEL</div>
+                    <div style="font-size: 9px; color: #64748b; margin-top: 2px;">Dynamic: 1W / D1 / DXY</div>
+                    <div id="pod-vote-macro" style="font-family: var(--font-mono); font-size: 16px; font-weight: 800; color: #94a3af; margin: 6px 0;">HOLD</div>
+                    <div style="font-size: 9px; color: #94a3af;">Yields / DXY / Catalysts</div>
+                </div>
+                <!-- Pod 2 -->
+                <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 10px; padding: 12px 10px; text-align: center;">
+                    <div style="font-size: 11px; color: var(--neural-blue); font-weight: 800; letter-spacing: 0.5px;">LOCATION AGENT</div>
+                    <div style="font-size: 9px; color: #64748b; margin-top: 2px;">Dynamic: 1W / D1 / H4 / H1</div>
+                    <div id="pod-vote-location" style="font-family: var(--font-mono); font-size: 16px; font-weight: 800; color: #94a3af; margin: 6px 0;">HOLD</div>
+                    <div style="font-size: 9px; color: #94a3af;">Floor / Ceiling / Breakout</div>
+                </div>
+                <!-- Pod 3 -->
+                <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(168, 85, 247, 0.35); border-radius: 10px; padding: 12px 10px; text-align: center;">
+                    <div style="font-size: 11px; color: var(--neural-purple); font-weight: 800; letter-spacing: 0.5px;">SMC TOPOLOGY</div>
+                    <div style="font-size: 9px; color: #64748b; margin-top: 2px;">Dynamic: D1 / H4 / M30 / M15</div>
+                    <div id="pod-vote-smc" style="font-family: var(--font-mono); font-size: 16px; font-weight: 800; color: #94a3af; margin: 6px 0;">HOLD</div>
+                    <div style="font-size: 9px; color: #94a3af;">OBs / FVGs / Sweeps</div>
+                </div>
+                <!-- Pod 4 -->
+                <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(0, 240, 255, 0.35); border-radius: 10px; padding: 12px 10px; text-align: center;">
+                    <div style="font-size: 11px; color: var(--neural-cyan); font-weight: 800; letter-spacing: 0.5px;">MOMENTUM AGENT</div>
+                    <div style="font-size: 9px; color: #64748b; margin-top: 2px;">Dynamic: H4 / H1 / M5 / M1</div>
+                    <div id="pod-vote-momentum" style="font-family: var(--font-mono); font-size: 16px; font-weight: 800; color: #94a3af; margin: 6px 0;">HOLD</div>
+                    <div style="font-size: 9px; color: #94a3af;">Velocity / Displacement</div>
+                </div>
+                <!-- Pod 5 -->
+                <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(232, 121, 249, 0.35); border-radius: 10px; padding: 12px 10px; text-align: center;">
+                    <div style="font-size: 11px; color: #e879f9; font-weight: 800; letter-spacing: 0.5px;">SENTIMENT TRAP</div>
+                    <div style="font-size: 9px; color: #64748b; margin-top: 2px;">Dynamic: SSI Book / Stops</div>
+                    <div id="pod-vote-sentiment" style="font-family: var(--font-mono); font-size: 16px; font-weight: 800; color: #94a3af; margin: 6px 0;">HOLD</div>
+                    <div style="font-size: 9px; color: #94a3af;">Herd Fading / Stop Sweeps</div>
+                </div>
+                <!-- Pod 6 -->
+                <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 10px; padding: 12px 10px; text-align: center;">
+                    <div style="font-size: 11px; color: var(--neural-emerald); font-weight: 800; letter-spacing: 0.5px;">CRO RISK GUARD</div>
+                    <div style="font-size: 9px; color: #64748b; margin-top: 2px;">Dynamic: M5 Geometry / Memory</div>
+                    <div id="pod-vote-cro" style="font-family: var(--font-mono); font-size: 16px; font-weight: 800; color: #94a3af; margin: 6px 0;">HOLD</div>
+                    <div style="font-size: 9px; color: #94a3af;">R:R &gt;= 1.8 / Veto Defense</div>
+                </div>
+            </div>
+
+            <!-- 6 SPECIALIZED ANALYST CHAMBERS (WAR ROOMS) -->
+            <div style="margin-top: 10px; margin-bottom: 16px;">
+                <div style="font-size: 11px; font-weight: 800; color: var(--neural-cyan); letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
+                    <span>⚡ 6 SPECIALIZED ANALYST CHAMBERS // MULTI-TIMEFRAME WAR ROOMS (14 AGENTS)</span>
+                    <span style="font-size: 10px; color: #94a3af; font-family: var(--font-mono);">D1 • H4 • H1 • M30 • M15 • M5 • M1</span>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                    <!-- Chamber 1: Morphology Lab -->
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(0, 240, 255, 0.25); border-radius: 8px; padding: 10px;">
+                        <div style="font-size: 10px; font-weight: 800; color: var(--neural-cyan);">ROOM 1 // MORPHOLOGY &amp; PATTERNS</div>
+                        <div style="font-size: 9px; color: #94a3af; margin-top: 2px;">MultiTFPatternDetector • Groww 38 Candlesticks</div>
+                        <div id="chamber-morphology-bias" style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: #fff; margin: 4px 0;">SCANNING...</div>
+                        <div id="chamber-morphology-desc" style="font-size: 9px; color: #64748b;">H&amp;S / W-Bottom / Flags across M5-D1</div>
+                    </div>
+                    <!-- Chamber 2: Supply/Demand & Liquidity -->
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(251, 191, 36, 0.25); border-radius: 8px; padding: 10px;">
+                        <div style="font-size: 10px; font-weight: 800; color: var(--neural-gold);">ROOM 2 // S&amp;D &amp; LIQUIDITY LAB</div>
+                        <div style="font-size: 9px; color: #94a3af; margin-top: 2px;">ChartPrime Delta Boxes • Freshness Rule</div>
+                        <div id="chamber-sd-status" style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: #fff; margin: 4px 0;">BASE: $4,145.50</div>
+                        <div id="chamber-sd-desc" style="font-size: 9px; color: #64748b;">1st Touch Edge / Spread &amp; Slippage Gate</div>
+                    </div>
+                    <!-- Chamber 3: Quantitative & Fibonacci -->
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 10px;">
+                        <div style="font-size: 10px; font-weight: 800; color: var(--neural-emerald);">ROOM 3 // SMC &amp; FIBONACCI OTE</div>
+                        <div style="font-size: 9px; color: #94a3af; margin-top: 2px;">0.618 Golden Pocket • Asian Raids • FVGs</div>
+                        <div id="chamber-quant-ote" style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: #fff; margin: 4px 0;">OTE: GOLDEN POCKET</div>
+                        <div id="chamber-quant-desc" style="font-size: 9px; color: #64748b;">Discount vs Premium / Extension Targets</div>
+                    </div>
+                    <!-- Chamber 4: Momentum & Volatility Squeeze -->
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(168, 85, 247, 0.25); border-radius: 8px; padding: 10px;">
+                        <div style="font-size: 10px; font-weight: 800; color: var(--neural-purple);">ROOM 4 // MOMENTUM &amp; SQUEEZE LAB</div>
+                        <div style="font-size: 9px; color: #94a3af; margin-top: 2px;">Bollinger Squeeze • RSI Exhaustion • EMA 9/21</div>
+                        <div id="chamber-momentum-status" style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: #fff; margin: 4px 0;">SQUEEZE: SCANNING</div>
+                        <div id="chamber-momentum-desc" style="font-size: 9px; color: #64748b;">M5/M1 Fast Cross / ATR Volatility Expansion</div>
+                    </div>
+                    <!-- Chamber 5: Order Flow & CVD Delta -->
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px; padding: 10px;">
+                        <div style="font-size: 10px; font-weight: 800; color: #38bdf8;">ROOM 5 // ORDER FLOW &amp; CVD LAB</div>
+                        <div style="font-size: 9px; color: #94a3af; margin-top: 2px;">CVD Divergences • Aggressor Flow • VWAP</div>
+                        <div id="chamber-orderflow-status" style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: #fff; margin: 4px 0;">CVD: SCANNING</div>
+                        <div id="chamber-orderflow-desc" style="font-size: 9px; color: #64748b;">Ask Lifters vs Bid Hitters / Absorption</div>
+                    </div>
+                    <!-- Chamber 6: Macro Regime & Syndicate Debate -->
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(244, 63, 94, 0.25); border-radius: 8px; padding: 10px;">
+                        <div style="font-size: 10px; font-weight: 800; color: var(--neural-rose);">ROOM 6 // MACRO REGIME &amp; SYNDICATE</div>
+                        <div style="font-size: 9px; color: #94a3af; margin-top: 2px;">Fractal Harmony • Bull/Bear Duel • Red Team</div>
+                        <div id="chamber-macro-status" style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: #fff; margin: 4px 0;">SYNDICATE: STANDBY</div>
+                        <div id="chamber-macro-desc" style="font-size: 9px; color: #64748b;">DXY / 10Y Yields / SSI Crowd Contrarian</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIVE TRANSCRIPT FEED STREAM: WHERE AGENTS TALK -->
+            <div class="card-title-line" style="margin-bottom: 8px;">
+                <span class="card-heading" style="font-size: 12px; color: #cbd5e1;">
+                    <span class="pulsar"></span>💬 ROUNDTABLE DISCUSSION FEED // WHAT AGENTS ARE SEEING &amp; SAYING
+                </span>
+                <span class="chip-label" style="font-size: 10px; color: var(--neural-cyan); border-color: rgba(56,189,248,0.3);">REAL-TIME COUNCIL STREAM</span>
+            </div>
+            <div id="warroom-transcript-stream" style="background: rgba(2, 6, 23, 0.9); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 10px; padding: 16px; max-height: 280px; overflow-y: auto; font-family: var(--font-mono); font-size: 12px; line-height: 1.85; display: flex; flex-direction: column; gap: 8px;">
+                <div style="color: #64748b;">[System]: Council convening... Waiting for next market pulse.</div>
+            </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- TECHNICAL COCKPIT & EXECUTION MATRIX (CHART, MACRO, CROWD SENTIMENT)      -->
+        <!-- ========================================================================= -->
+        <div class="deck-layout-3">
+            <div class="frosted-panel">
+                <div class="card-title-line">
+                    <span class="card-heading"><span class="pulsar"></span>CROWD MOOD &amp; TRAP SENTRY</span>
+                    <span class="chip-label" id="cockpit-session-pill">LONDON</span>
+                </div>
+                <div style="margin-bottom: 14px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 6px;">
+                        <span style="color: var(--neural-emerald);" id="cockpit-long-pct">71.4% LONG</span>
+                        <span style="color: var(--neural-rose);" id="cockpit-short-pct">28.6% SHORT</span>
+                    </div>
+                    <div style="width: 100%; height: 6px; background: rgba(244,63,94,0.3); border-radius: 4px; overflow: hidden; display: flex;">
+                        <div id="cockpit-sentiment-fill" style="width: 71.4%; height: 100%; background: var(--neural-emerald);"></div>
+                    </div>
+                </div>
+                <div style="background: rgba(251,191,36,0.08); border: 1px solid var(--neural-gold); border-radius: 8px; padding: 10px; font-size: 11px; color: #fef08a; line-height: 1.4; margin-bottom: 16px;">
+                    ⚠️ RETAIL TRAP ALERT: Retail crowd is heavily long. Institutions engineered sell-side flush. Wait for sweep before longs.
+                </div>
+                <div class="card-title-line" style="margin-top: 14px;">
+                    <span class="card-heading"><span class="pulsar"></span>LIVE MACRO SUITE</span>
+                </div>
+                <div class="datum-row"><span class="datum-name">US Dollar (DXY):</span><span class="datum-val" id="cockpit-dxy">101.92</span></div>
+                <div class="datum-row"><span class="datum-name">US 10Y Yield:</span><span class="datum-val" id="cockpit-us10y">5.277%</span></div>
+                <div class="datum-row"><span class="datum-name">WTI Crude Oil:</span><span class="datum-val" id="cockpit-oil">$91.11</span></div>
+                <div class="datum-row"><span class="datum-name">Gold Macro Bias:</span><span class="datum-val" id="cockpit-bias" style="color: var(--neural-cyan);">BULLISH</span></div>
+            </div>
+
+            <div class="frosted-panel" style="display: flex; flex-direction: column; gap: 14px;">
+                <div class="card-title-line">
+                    <span class="card-heading"><span class="pulsar"></span>XAU/USD M5 SMART MONEY STRUCTURE</span>
+                    <span class="chip-label">OB &amp; FVG ACTIVE</span>
+                </div>
+                <canvas id="cockpitChartCanvas" style="width: 100%; height: 270px; background: rgba(0,0,0,0.4); border-radius: 12px;"></canvas>
+                
+                <div class="card-title-line" style="margin-top: 4px;">
+                    <span class="card-heading"><span class="pulsar"></span>COGNITIVE THOUGHT STREAM</span>
+                    <span class="chip-label">REASONING ENGINE</span>
+                </div>
+                <div id="cockpit-monologue-feed" style="background: rgba(2,6,18,0.7); border: 1px solid rgba(56,189,248,0.2); border-radius: 10px; padding: 12px; height: 110px; overflow-y: auto; font-family: var(--font-mono); font-size: 11px; color: #38bdf8; line-height: 1.6;">
+                    [14:00:01] JARVIS Cognition: Synthesizing M5 Liquidity Sweep at $4,125.18. Secular 1-Year Bullish flow intact.<br>
+                    [14:00:03] DXY softening at 101.92. US 10Y Yield stabilizing at 5.277%. Risk-to-Reward validated at 1:2.4.<br>
+                    [14:00:05] Clearance APPROVED: Tactical Long Entry armed with Cognitive Trailing SL.
+                </div>
+
+                <button class="btn-intercom" onclick="toggleJarvisVoice()">
+                    <span>🎙️</span>
+                    <span id="voice-btn-label">INTERCOM: SPEAK WITH JARVIS</span>
+                </button>
+            </div>
+
+            <div class="frosted-panel">
+                <div class="card-title-line">
+                    <span class="card-heading"><span class="pulsar"></span>BREAKING FINANCIAL WIRE</span>
+                    <span class="chip-label">GOOGLE &amp; FXSTREET</span>
+                </div>
+                <div id="cockpit-news-feed" style="max-height: 210px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 11px; color: #94a3af; margin-bottom: 16px;">
+                    <div><strong style="color: var(--neural-cyan);">[Google News]</strong> Gold Update: XAU/USD Remains Under Pressure Even After NFP Report</div>
+                    <div><strong style="color: var(--neural-gold);">[FXStreet]</strong> Gold Price Forecast: US Nonfarm Payrolls holds key to next move</div>
+                    <div><strong style="color: var(--neural-cyan);">[FOREX.com]</strong> Gold Forecast: Are Bears Regaining Control of XAU/USD?</div>
+                </div>
+
+                <div class="card-title-line">
+                    <span class="card-heading"><span class="pulsar"></span>9-TIMEFRAME CONFLUENCE</span>
+                    <span class="chip-label" style="color: var(--neural-gold);">33% ALIGNED</span>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; font-family: var(--font-mono); font-size: 10px; text-align: center;">
+                    <div style="background: rgba(16,185,129,0.1); border: 1px solid var(--neural-emerald); color: var(--neural-emerald); padding: 5px; border-radius: 6px;">1Y: BULL</div>
+                    <div style="background: rgba(251,191,36,0.1); border: 1px solid var(--neural-gold); color: var(--neural-gold); padding: 5px; border-radius: 6px;">6M: RANGE</div>
+                    <div style="background: rgba(16,185,129,0.1); border: 1px solid var(--neural-emerald); color: var(--neural-emerald); padding: 5px; border-radius: 6px;">1M: DISC</div>
+                    <div style="background: rgba(244,63,94,0.1); border: 1px solid var(--neural-rose); color: var(--neural-rose); padding: 5px; border-radius: 6px;">1W: PULL</div>
+                    <div style="background: rgba(244,63,94,0.1); border: 1px solid var(--neural-rose); color: var(--neural-rose); padding: 5px; border-radius: 6px;">D1: CORR</div>
+                    <div style="background: rgba(16,185,129,0.1); border: 1px solid var(--neural-emerald); color: var(--neural-emerald); padding: 5px; border-radius: 6px;">H4: FLOW</div>
+                    <div style="background: rgba(244,63,94,0.1); border: 1px solid var(--neural-rose); color: var(--neural-rose); padding: 5px; border-radius: 6px;">H1: PULL</div>
+                    <div style="background: rgba(244,63,94,0.1); border: 1px solid var(--neural-rose); color: var(--neural-rose); padding: 5px; border-radius: 6px;">M15: HUNT</div>
+                    <div style="background: rgba(0,240,255,0.1); border: 1px solid var(--neural-cyan); color: var(--neural-cyan); padding: 5px; border-radius: 6px;">M5: READY</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- PAGE 3: TRADE DOCTOR CLINIC (ACTIVE IN-FLIGHT DEFENSE)                    -->
+    <!-- ========================================================================= -->
+    <div id="stage-doctor" class="stage-view">
+        <div class="deck-layout-2">
+            <div class="frosted-panel">
+                <div class="card-title-line">
+                    <span class="card-heading"><span class="pulsar"></span>ACTIVE IN-FLIGHT DEFENSE MATRIX</span>
+                    <span class="chip-label" style="color: var(--neural-rose); border-color: var(--neural-rose);">PROACTIVE SENTRY</span>
+                </div>
+                <div style="font-size: 14px; color: #94a3af; line-height: 1.6; margin-bottom: 18px;">
+                    When trades move into adverse loss, Trajedor <strong>DOES NOT SIT PASSIVELY</strong> waiting for the broker hard stop-loss. It tests structural breakdown vs. temporary liquidity sweeps, executing early cuts at <strong>-0.3R to save 70% of risk capital</strong>.
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px;">
+                    <div style="background: rgba(244,63,94,0.08); border: 1px solid var(--neural-rose); border-radius: 12px; padding: 16px; text-align: center;">
+                        <div style="font-size: 11px; color: #94a3af;">EARLY CUT THRESHOLD</div>
+                        <div style="font-family: var(--font-display); font-size: 26px; color: var(--neural-rose); font-weight: 700; margin: 4px 0;">-0.30 R</div>
+                        <div style="font-size: 10px; color: #64748b;">Saves 70% of Risk Capital</div>
+                    </div>
+                    <div style="background: rgba(16,185,129,0.08); border: 1px solid var(--neural-emerald); border-radius: 12px; padding: 16px; text-align: center;">
+                        <div style="font-size: 11px; color: #94a3af;">BREAKEVEN LOCK</div>
+                        <div style="font-family: var(--font-display); font-size: 26px; color: var(--neural-emerald); font-weight: 700; margin: 4px 0;">+0.75 R</div>
+                        <div style="font-size: 10px; color: #64748b;">Zero Downside Risk Guaranteed</div>
+                    </div>
+                </div>
+                <div class="datum-row"><span class="datum-name">Cumulative Capital Saved:</span><span class="datum-val" style="color: var(--neural-emerald);">+€148.60 (3 Early Cuts)</span></div>
+                <div class="datum-row"><span class="datum-name">Thesis Invalidation Detection:</span><span class="datum-val" style="color: var(--neural-cyan);">Opposing M5 FVG Printed</span></div>
+                <div class="datum-row"><span class="datum-name">Emergency Actions:</span><span class="datum-val" style="color: var(--neural-gold);">1. Close 50% De-Risk | 2. Immediate Exit</span></div>
+            </div>
+
+            <div class="frosted-panel">
+                <div class="card-title-line">
+                    <span class="card-heading"><span class="pulsar"></span>IN-FLIGHT FORENSIC VERDICT TERMINAL</span>
+                    <span class="chip-label">ACTIVE MONITOR</span>
+                </div>
+                <div style="background: rgba(2,6,18,0.7); border: 1px solid rgba(56,189,248,0.2); border-radius: 12px; padding: 16px; font-family: var(--font-mono); font-size: 12px; color: #38bdf8; min-height: 280px; line-height: 1.7;">
+                    [DEFENSE STATUS: ARMED]<br>
+                    • Active In-Flight Sentinels: GREEN<br>
+                    • Broker Hard SL Surrender: DISABLED (Replaced by Active Defense Intervention)<br>
+                    • Macro Shock Monitor: Watching DXY &amp; 10Y Yield spikes<br>
+                    • Floating Trades Under Diagnosis: 0 Pure AI Trades Open<br>
+                    ------------------------------------------------------------<br>
+                    <span style="color: var(--neural-emerald);">• Standing Diagnostic Protocol:</span><br>
+                    &nbsp;&nbsp;1. If trade floating between 0.0R and -0.25R: HOLD conviction (Liquidity Sweep Zone).<br>
+                    &nbsp;&nbsp;2. If trade reaches -0.30R AND opposing FVG prints: TRIGGER EARLY CUT IMMEDIATELY.<br>
+                    &nbsp;&nbsp;3. If trade reaches +0.75R: MOVE SL TO BREAKEVEN.<br>
+                    &nbsp;&nbsp;4. If momentum continues: PROMOTE TO SWING RUNNER.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- PAGE 4: MISTAKE AUTOPSY LAB (SELF-IMPROVEMENT & LESSONS)                  -->
+    <!-- ========================================================================= -->
+    <div id="stage-autopsy" class="stage-view">
+        <div class="deck-layout-2">
+            <div class="frosted-panel">
+                <div class="card-title-line">
+                    <span class="card-heading"><span class="pulsar"></span>FORENSIC LOSS AUTOPSIES (OCT 1 &amp; 2)</span>
+                    <span class="chip-label">EVIDENCE RECORD</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="background: rgba(244,63,94,0.06); border-left: 3px solid var(--neural-rose); padding: 12px; border-radius: 6px;">
+                        <div style="font-family: var(--font-display); font-size: 12px; font-weight: 700; color: var(--neural-rose);">
+                            CASE 01: FALLING KNIFE DISASTER (-€34.80 LOSS)
+                        </div>
+                        <div style="font-size: 11px; color: #94a3af; margin-top: 4px;">
+                            <strong>What went wrong:</strong> Old algorithm bought the top at 4153.20 into aggressive downward displacement while DXY spiked, holding passively until hard SL hit.<br>
+                            <span style="color: var(--neural-gold);">Learned Rule:</span> NEVER buy premium highs without sell-side liquidity sweep and completed M5 structural CHoCH.
+                        </div>
+                    </div>
+                    <div style="background: rgba(251,191,36,0.06); border-left: 3px solid var(--neural-gold); padding: 12px; border-radius: 6px;">
+                        <div style="font-family: var(--font-display); font-size: 12px; font-weight: 700; color: var(--neural-gold);">
+                            CASE 02: PANIC BOTTOM SELLING (-€12.14 LOSS)
+                        </div>
+                        <div style="font-size: 11px; color: #94a3af; margin-top: 4px;">
+                            <strong>What went wrong:</strong> Old algorithm flipped to SELL at 4141.00 directly at the low of the day into institutional support, immediately stopped out on the rebound.<br>
+                            <span style="color: var(--neural-gold);">Learned Rule:</span> NEVER sell the bottom into daily discount floor after extended exhaustion.
+                        </div>
+                    </div>
+                    <div style="background: rgba(56,189,248,0.06); border-left: 3px solid var(--neural-cyan); padding: 12px; border-radius: 6px;">
+                        <div style="font-family: var(--font-display); font-size: 12px; font-weight: 700; color: var(--neural-cyan);">
+                            CASE 03: SEVERE NEGATIVE ASYMMETRY
+                        </div>
+                        <div style="font-size: 11px; color: #94a3af; margin-top: 4px;">
+                            <strong>What went wrong:</strong> Average win was +€6.74 while average loss was -€17.85. 61.9% win rate still produced net loss.<br>
+                            <span style="color: var(--neural-gold);">Learned Rule:</span> Enforce Trade Doctor early cuts at -0.3R to flip asymmetry positive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="frosted-panel">
+                <div class="card-title-line">
+                    <span class="card-heading"><span class="pulsar"></span>ACTIVE RULEBOOK (LESSONS_LEARNED.JSON)</span>
+                    <span class="chip-label" style="color: var(--neural-emerald); border-color: var(--neural-emerald);">ENFORCING</span>
+                </div>
+                <div id="autopsy-rules-deck" style="display: flex; flex-direction: column; gap: 10px; font-size: 12px;">
+                    <!-- Dynamically populated from API -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- PAGE 5: MULTI-TERMINAL VAULT & PURE AI LEDGER                             -->
+    <!-- ========================================================================= -->
+    <div id="stage-vault" class="stage-view">
+        <div class="frosted-panel" style="margin-bottom: 16px;">
+            <div class="card-title-line" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+                <div>
+                    <span class="card-heading"><span class="pulsar"></span>MULTI-TERMINAL FLEET &amp; DYNAMIC RISK GATES</span>
+                    <span class="chip-label" id="fleet-account-count">DISCOVERING...</span>
+                </div>
+                <button class="btn-scan-terminals" id="btn-scan-terminals" onclick="triggerTerminalScan()" title="Scan Windows processes to auto-detect any newly launched MT5 terminals">
+                    <svg viewBox="0 0 24 24" class="scan-icon"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+                    <span>AUTO-DETECT NEW TERMINALS</span>
+                </button>
+            </div>
+            <div id="fleet-terminals-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+                <!-- Dynamically populated from API: Each detected terminal receives its own dedicated card -->
+            </div>
+        </div>
+
+        <div class="frosted-panel">
+            <div class="card-title-line">
+                <span class="card-heading"><span class="pulsar"></span>PURE TRAJEDOR EPISODIC LEDGER</span>
+                <span class="chip-label">100% PURE ALGO</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>TICKET</th>
+                        <th>TIME</th>
+                        <th>TERMINAL</th>
+                        <th>ACTION</th>
+                        <th>VOL</th>
+                        <th>ENTRY</th>
+                        <th>SL</th>
+                        <th>TP</th>
+                        <th>R:R</th>
+                        <th>STATUS</th>
+                        <th>DIAGNOSTIC &amp; LESSON</th>
+                    </tr>
+                </thead>
+                <tbody id="vault-ledger-rows">
+                    <tr>
+                        <td colspan="11" style="text-align: center; color: #64748b; padding: 24px;">
+                            🤖 Trajedor Pure AI Ledger is armed and ready. Manual trades from MT5 are strictly excluded.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- PAGE 6: 6-SCREEN MULTI-TIMEFRAME MATRIX (M1, M5, M15, H1, H4, 1D)         -->
+    <!-- ========================================================================= -->
+    <div id="stage-mtf" class="stage-view">
+        <div class="mtf-deck-container">
+            <!-- Toolbar: Symbol Selectors, Quick Presets & Status -->
+            <div class="mtf-toolbar">
+                <div class="mtf-toolbar-left">
+                    <div class="mtf-title">
+                        <span>MULTI-TIMEFRAME SYNAPSE</span> // 6-SCREEN MATRIX
+                    </div>
+                    <div class="mtf-presets">
+                        <button class="btn-preset active-preset" onclick="setMTFPreset('OANDA:XAUUSD', this)">XAU/USD (GOLD)</button>
+                        <button class="btn-preset" onclick="setMTFPreset('BINANCE:BTCUSDT', this)">BTC/USDT</button>
+                        <button class="btn-preset" onclick="setMTFPreset('FX:EURUSD', this)">EUR/USD</button>
+                        <button class="btn-preset" onclick="setMTFPreset('FOREXCOM:DJI', this)">US30 (DOW)</button>
+                        <button class="btn-preset" onclick="setMTFPreset('NASDAQ:NDX', this)">NAS100</button>
+                    </div>
+                    <div class="mtf-custom-sym">
+                        <input type="text" id="mtf-custom-input" class="mtf-sym-input" placeholder="CUSTOM SYMBOL" value="OANDA:XAUUSD" onkeydown="if(event.key==='Enter') applyCustomMTFSymbol()">
+                        <button class="btn-preset" onclick="applyCustomMTFSymbol()" style="border-radius: 8px;">APPLY</button>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div class="pill-stat pill-cyan" id="mtf-sync-status">
+                        <span>6 SCREENS SYNCED</span>
+                    </div>
+                    <button class="btn-preset" onclick="refreshAllMTFCharts()" style="color: var(--neural-cyan); border-color: rgba(0,240,255,0.4);">
+                        ↺ REFRESH ALL
+                    </button>
+                </div>
+            </div>
+
+            <!-- Gold Pattern Sentinel Radar: Real-Time True vs False Structure Banner -->
+            <div style="background: rgba(4, 12, 34, 0.7); border: 1px solid rgba(0, 240, 255, 0.25); border-radius: 12px; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 11px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="color: var(--neural-gold); font-weight: 800; font-family: var(--font-mono); font-size: 12px;">[GOLD STRUCTURE SENTINEL]</span>
+                    <span style="color: #94a3af;">Real-Time Institutional Multi-Timeframe Filter:</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 14px; font-family: var(--font-mono); font-size: 10px;">
+                    <span style="color: var(--neural-emerald);">✓ TRUE STRUCTURE: M15 Body Close &gt; Swing + Liquidity Absorption Wick (Turtle Soup)</span>
+                    <span style="color: var(--neural-rose);">✗ FALSE TRAP: 1M Fakeout / Mid-Run Churn (Equilibrium 35%-72% Vetoed)</span>
+                </div>
+            </div>
+
+            <!-- 6-Screen Grid -->
+            <div class="mtf-grid-6">
+                <!-- SCREEN 1: 1-MINUTE (SCALP EXECUTION) -->
+                <div class="mtf-screen-card" id="card-tf-m1">
+                    <div class="mtf-card-header">
+                        <div class="mtf-badge-group">
+                            <span class="mtf-tf-pill pill-m1">1M</span>
+                            <span class="mtf-card-label">MICRO SCALP // WICK ABSORPTION</span>
+                        </div>
+                        <div class="mtf-card-actions">
+                            <button class="btn-card-action" title="Maximize Chart" onclick="toggleMaximizeCard('card-tf-m1')">⛶</button>
+                        </div>
+                    </div>
+                    <div class="mtf-card-body" id="body-tf-m1"></div>
+                </div>
+
+                <!-- SCREEN 2: 5-MINUTE (ENTRY & PATTERNS) -->
+                <div class="mtf-screen-card" id="card-tf-m5">
+                    <div class="mtf-card-header">
+                        <div class="mtf-badge-group">
+                            <span class="mtf-tf-pill pill-m5">5M</span>
+                            <span class="mtf-card-label">ENTRY PATTERNS // CHoCH &amp; W/M SETUPS</span>
+                        </div>
+                        <div class="mtf-card-actions">
+                            <button class="btn-card-action" title="Maximize Chart" onclick="toggleMaximizeCard('card-tf-m5')">⛶</button>
+                        </div>
+                    </div>
+                    <div class="mtf-card-body" id="body-tf-m5"></div>
+                </div>
+
+                <!-- SCREEN 3: 15-MINUTE (SWING HIGHS & LOWS) -->
+                <div class="mtf-screen-card" id="card-tf-m15">
+                    <div class="mtf-card-header">
+                        <div class="mtf-badge-group">
+                            <span class="mtf-tf-pill pill-m15">15M</span>
+                            <span class="mtf-card-label">SWING HIGHS/LOWS // LIQUIDITY SWEEPS</span>
+                        </div>
+                        <div class="mtf-card-actions">
+                            <button class="btn-card-action" title="Maximize Chart" onclick="toggleMaximizeCard('card-tf-m15')">⛶</button>
+                        </div>
+                    </div>
+                    <div class="mtf-card-body" id="body-tf-m15"></div>
+                </div>
+
+                <!-- SCREEN 4: 1-HOUR (INTRADAY ORDER BLOCKS) -->
+                <div class="mtf-screen-card" id="card-tf-h1">
+                    <div class="mtf-card-header">
+                        <div class="mtf-badge-group">
+                            <span class="mtf-tf-pill pill-h1">1H</span>
+                            <span class="mtf-card-label">INTRADAY TREND // S&amp;R ORDER BLOCKS</span>
+                        </div>
+                        <div class="mtf-card-actions">
+                            <button class="btn-card-action" title="Maximize Chart" onclick="toggleMaximizeCard('card-tf-h1')">⛶</button>
+                        </div>
+                    </div>
+                    <div class="mtf-card-body" id="body-tf-h1"></div>
+                </div>
+
+                <!-- SCREEN 5: 4-HOUR (INSTITUTIONAL MACRO) -->
+                <div class="mtf-screen-card" id="card-tf-h4">
+                    <div class="mtf-card-header">
+                        <div class="mtf-badge-group">
+                            <span class="mtf-tf-pill pill-h4">4H</span>
+                            <span class="mtf-card-label">INSTITUTIONAL FLOW // FVG EXPANSIONS</span>
+                        </div>
+                        <div class="mtf-card-actions">
+                            <button class="btn-card-action" title="Maximize Chart" onclick="toggleMaximizeCard('card-tf-h4')">⛶</button>
+                        </div>
+                    </div>
+                    <div class="mtf-card-body" id="body-tf-h4"></div>
+                </div>
+
+                <!-- SCREEN 6: 1-DAY (SECULAR REGIME & RANGE) -->
+                <div class="mtf-screen-card" id="card-tf-d1">
+                    <div class="mtf-card-header">
+                        <div class="mtf-badge-group">
+                            <span class="mtf-tf-pill pill-d1">1D</span>
+                            <span class="mtf-card-label">DAILY REGIME // EQUILIBRIUM &amp; BIAS</span>
+                        </div>
+                        <div class="mtf-card-actions">
+                            <button class="btn-card-action" title="Maximize Chart" onclick="toggleMaximizeCard('card-tf-d1')">⛶</button>
+                        </div>
+                    </div>
+                    <div class="mtf-card-body" id="body-tf-d1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- REAL BIOLOGICAL ANATOMICAL BRAIN & NERVOUS SYSTEM CANVAS SCRIPT           -->
+    <!-- ========================================================================= -->
+    <script>
+        function switchStage(stageId) {
+            document.querySelectorAll('.stage-view').forEach(p => p.classList.remove('active-stage'));
+            document.querySelectorAll('.deck-tab').forEach(b => b.classList.remove('active-tab'));
+            document.getElementById(stageId).classList.add('active-stage');
+
+            const btns = document.querySelectorAll('.deck-tab');
+            if (stageId === 'stage-core') btns[0].classList.add('active-tab');
+            if (stageId === 'stage-cockpit') {
+                btns[1].classList.add('active-tab');
+                setTimeout(drawCockpitChart, 100);
+            }
+            if (stageId === 'stage-doctor') btns[2].classList.add('active-tab');
+            if (stageId === 'stage-autopsy') btns[3].classList.add('active-tab');
+            if (stageId === 'stage-vault') btns[4].classList.add('active-tab');
+            if (stageId === 'stage-mtf') {
+                btns[5].classList.add('active-tab');
+                initMTFCharts();
+            }
+        }
+
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('header-clock').innerText = now.toUTCString().split(' ')[4] + ' UTC';
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // =====================================================================
+        // BIOLOGICAL 3D BRAIN & LIVING NERVOUS SYSTEM SIMULATION ENGINE
+        // =====================================================================
+        const canvas = document.getElementById('nervousSystemCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, cX, cY;
+
+        function resizeCanvas() {
+            width = canvas.parentElement.clientWidth;
+            height = canvas.parentElement.clientHeight;
+            canvas.width = width;
+            canvas.height = height;
+            cX = width / 2;
+            cY = height / 2 - 25;
+            initNervousSystem();
+        }
+        window.addEventListener('resize', resizeCanvas);
+
+        // 1. Build Volumetric 3D Dual-Hemisphere Biological Brain (320 Neurons)
+        let brainNeurons = [];
+        let synapticLinks = [];
+        let corpusCallosumLinks = [];
+        let nerveCables = [];
+        let activeHoveredGateway = null;
+
+        function initNervousSystem() {
+            brainNeurons = [];
+            synapticLinks = [];
+            corpusCallosumLinks = [];
+            nerveCables = [];
+
+            const totalNeurons = 320;
+            const hemisphereOffset = 100; // Separation between left & right hemispheres
+
+            for (let i = 0; i < totalNeurons; i++) {
+                const isLeft = i < totalNeurons / 2;
+                const sign = isLeft ? -1 : 1;
+
+                // Spherical & Ellipsoidal coordinates tailored to human brain morphology
+                const u = Math.random();
+                const v = Math.random();
+                const theta = u * 2.0 * Math.PI;
+                const phi = Math.acos(2.0 * v - 1.0);
+                const r = Math.cbrt(Math.random()) * 0.95 + 0.05;
+
+                // Anatomical radii (Frontal-Occipital: 155px, Superior-Inferior: 125px, Lateral: 95px)
+                const rx = 90;
+                const ry = 145;
+                const rz = 115;
+
+                // Local coordinate relative to hemisphere center
+                let lx = Math.sin(phi) * Math.cos(theta) * rx * r;
+                let ly = Math.sin(phi) * Math.sin(theta) * ry * r;
+                let lz = Math.cos(phi) * rz * r;
+
+                // Medial flattening along longitudinal fissure (keeps inner faces flat & vertical)
+                if (lx * sign < 12) {
+                    lx = (12 + Math.random() * 8) * sign;
+                }
+
+                // Brain lobe categorization
+                let lobe = 'parietal';
+                if (ly < -40) lobe = 'frontal';
+                else if (ly > 45) lobe = 'occipital';
+                else if (lz > 20) lobe = 'temporal';
+
+                // Dendrite twigs
+                const dendrites = [];
+                const twigCount = 3 + Math.floor(Math.random() * 3);
+                for (let t = 0; t < twigCount; t++) {
+                    const ang = Math.random() * Math.PI * 2;
+                    const len = 8 + Math.random() * 16;
+                    dendrites.push({
+                        dx: Math.cos(ang) * len,
+                        dy: Math.sin(ang) * len,
+                        subDx: Math.cos(ang + 0.4) * (len * 0.5),
+                        subDy: Math.sin(ang + 0.4) * (len * 0.5)
+                    });
+                }
+
+                brainNeurons.push({
+                    id: i,
+                    isLeft: isLeft,
+                    lobe: lobe,
+                    x3d: lx + (sign * hemisphereOffset),
+                    y3d: ly,
+                    z3d: lz,
+                    screenX: 0,
+                    screenY: 0,
+                    scale: 1,
+                    color: isLeft ? '#00f0ff' : (Math.random() > 0.4 ? '#fbbf24' : '#c084fc'),
+                    somaRadius: 2.2 + Math.random() * 2.2,
+                    dendrites: dendrites,
+                    pulsePhase: Math.random() * Math.PI * 2,
+                    firingIntensity: Math.random() > 0.8 ? 1.0 : 0.0
+                });
+            }
+
+            // Synaptic Links within Hemispheres
+            for (let i = 0; i < brainNeurons.length; i++) {
+                const n1 = brainNeurons[i];
+                let connections = 0;
+                for (let j = i + 1; j < brainNeurons.length; j++) {
+                    const n2 = brainNeurons[j];
+                    if (n1.isLeft === n2.isLeft) {
+                        const dist = Math.hypot(n1.x3d - n2.x3d, n1.y3d - n2.y3d, n1.z3d - n2.z3d);
+                        if (dist < 44 && connections < 4) {
+                            synapticLinks.push({
+                                n1: n1,
+                                n2: n2,
+                                color: n1.color,
+                                signalProg: Math.random(),
+                                signalSpeed: 0.012 + Math.random() * 0.022
+                            });
+                            connections++;
+                        }
+                    }
+                }
+            }
+
+            // Corpus Callosum Commissural Fibers (Bridging Left & Right Hemispheres across Fissure)
+            const leftMedial = brainNeurons.filter(n => n.isLeft && Math.abs(n.x3d) < 140);
+            const rightMedial = brainNeurons.filter(n => !n.isLeft && Math.abs(n.x3d) < 140);
+            for (let i = 0; i < Math.min(24, leftMedial.length, rightMedial.length); i++) {
+                corpusCallosumLinks.push({
+                    n1: leftMedial[i],
+                    n2: rightMedial[i],
+                    signalProg: Math.random(),
+                    signalSpeed: 0.02 + Math.random() * 0.03
+                });
+            }
+
+            // 7 Major Peripheral Nerve Pathways (Connecting Brain to Screen Ganglia Cards)
+            const gangliaTargets = [
+                { id: 'ganglion-optic', name: 'OPTIC SENSORY', color: '#00f0ff', isIncoming: true, lobe: 'frontal', isLeft: true, packetText: 'OB $4156.02' },
+                { id: 'ganglion-news', name: 'ACOUSTIC INTEL', color: '#f43f5e', isIncoming: true, lobe: 'temporal', isLeft: true, packetText: 'NEWS: FED' },
+                { id: 'ganglion-memory', name: 'HIPPOCAMPUS', color: '#c084fc', isIncoming: true, lobe: 'occipital', isLeft: true, packetText: 'RULE 2 ARMED' },
+                { id: 'ganglion-macro', name: 'MACRO SOMATIC', color: '#fbbf24', isIncoming: true, lobe: 'frontal', isLeft: false, packetText: 'US10Y 5.28%' },
+                { id: 'ganglion-emotion', name: 'ENDOCRINE EMOTION', color: '#e879f9', isIncoming: true, lobe: 'temporal', isLeft: false, packetText: 'RETAIL 71%' },
+                { id: 'ganglion-defense', name: 'TRADE DOCTOR', color: '#10b981', isIncoming: false, lobe: 'occipital', isLeft: false, packetText: 'CUT -0.3R' },
+                { id: 'ganglion-mt5', name: 'TRI-TERMINAL FLEET', color: '#38bdf8', isIncoming: false, lobe: 'brainstem', isLeft: false, packetText: 'SNIPER ORDER' }
+            ];
+
+            gangliaTargets.forEach(gt => {
+                const el = document.getElementById(gt.id);
+                let targetX = cX + (gt.isLeft ? -450 : 450);
+                let targetY = cY;
+
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    const arenaRect = canvas.getBoundingClientRect();
+                    targetX = (gt.isLeft ? (rect.right - arenaRect.left) : (rect.left - arenaRect.left));
+                    targetY = rect.top - arenaRect.top + rect.height / 2;
+                }
+
+                // Hook hover events on HTML cards
+                if (el && !el.dataset.hasListener) {
+                    el.dataset.hasListener = 'true';
+                    el.addEventListener('mouseenter', () => { activeHoveredGateway = gt.id; });
+                    el.addEventListener('mouseleave', () => { activeHoveredGateway = null; });
+                }
+
+                // Bundle of 6 fine wavy nerve fibers connecting each peripheral organ into brain
+                const candidateNeurons = brainNeurons.filter(n => n.isLeft === gt.isLeft);
+                for (let f = 0; f < 6; f++) {
+                    const originNeuron = candidateNeurons[(f * 17) % candidateNeurons.length];
+                    nerveCables.push({
+                        gatewayId: gt.id,
+                        origin: originNeuron,
+                        targetX: targetX,
+                        targetY: targetY + (f - 2.5) * 12,
+                        color: gt.color,
+                        isIncoming: gt.isIncoming,
+                        packetText: gt.packetText,
+                        waveAmp: 30 + Math.random() * 40,
+                        waveFreq: 1.5 + Math.random() * 1.5,
+                        phaseOffset: Math.random() * Math.PI * 2,
+                        signalProg: (f * 0.16) % 1.0,
+                        signalSpeed: 0.010 + Math.random() * 0.015
+                    });
+                }
+            });
+        }
+
+        let simTime = 0;
+
+        function renderNervousSystem() {
+            ctx.clearRect(0, 0, width, height);
+            simTime += 0.022;
+
+            // Subtle Organic 3D Brain Rotation (Yaw, Pitch, Respiration)
+            const yaw = Math.sin(simTime * 0.35) * 0.16;
+            const pitch = Math.cos(simTime * 0.28) * 0.07;
+            const breathe = 1 + Math.sin(simTime * 1.8) * 0.022;
+            const fov = 700;
+
+            // 1. Transform and Project 3D Neurons
+            brainNeurons.forEach(n => {
+                // Yaw rotation around Y axis
+                const cosY = Math.cos(yaw);
+                const sinY = Math.sin(yaw);
+                const rx = n.x3d * cosY + n.z3d * sinY;
+                const rz1 = -n.x3d * sinY + n.z3d * cosY;
+
+                // Pitch rotation around X axis
+                const cosP = Math.cos(pitch);
+                const sinP = Math.sin(pitch);
+                const ry = n.y3d * cosP - rz1 * sinP;
+                const rz = n.y3d * sinP + rz1 * cosP;
+
+                const scale = (fov / (fov + rz)) * breathe;
+                n.screenX = cX + rx * scale;
+                n.screenY = cY + ry * scale;
+                n.scale = scale;
+                n.depth = rz;
+
+                // Synaptic pulse respiration
+                n.pulsePhase += 0.04;
+                if (Math.random() > 0.985) {
+                    n.firingIntensity = 1.0;
+                } else {
+                    n.firingIntensity = Math.max(0, n.firingIntensity - 0.04);
+                }
+            });
+
+            // 2. Holographic Pedestal / Ground Projection Rings beneath brain
+            ctx.save();
+            ctx.globalCompositeOperation = 'lighter';
+            const floorY = cY + 165;
+            for (let r = 1; r <= 3; r++) {
+                ctx.beginPath();
+                ctx.ellipse(cX, floorY, 180 * r * 0.45, 45 * r * 0.45, 0, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(0, 240, 255, ${0.18 / r})`;
+                ctx.lineWidth = 1.5;
+                ctx.shadowColor = '#00f0ff';
+                ctx.shadowBlur = 10;
+                ctx.stroke();
+            }
+            // Rotating azimuth tick marks
+            const tickCount = 18;
+            for (let i = 0; i < tickCount; i++) {
+                const ang = (i / tickCount) * Math.PI * 2 + simTime * 0.2;
+                const tx1 = cX + Math.cos(ang) * 115;
+                const ty1 = floorY + Math.sin(ang) * 28;
+                const tx2 = cX + Math.cos(ang) * 125;
+                const ty2 = floorY + Math.sin(ang) * 31;
+                ctx.beginPath();
+                ctx.moveTo(tx1, ty1);
+                ctx.lineTo(tx2, ty2);
+                ctx.strokeStyle = 'rgba(0, 240, 255, 0.4)';
+                ctx.lineWidth = 1.2;
+                ctx.stroke();
+            }
+            ctx.restore();
+
+            // 3. Central Glowing Longitudinal Fissure & Spinal Conduit (The vertical laser core)
+            ctx.save();
+            ctx.globalCompositeOperation = 'lighter';
+            const laserGrad = ctx.createLinearGradient(cX, cY - 170, cX, cY + 175);
+            laserGrad.addColorStop(0, 'rgba(0, 240, 255, 0.2)');
+            laserGrad.addColorStop(0.3, 'rgba(0, 240, 255, 0.95)');
+            laserGrad.addColorStop(0.5, 'rgba(255, 255, 255, 1)');
+            laserGrad.addColorStop(0.7, 'rgba(0, 240, 255, 0.95)');
+            laserGrad.addColorStop(1, 'rgba(2, 132, 199, 0.3)');
+
+            ctx.strokeStyle = laserGrad;
+            ctx.lineWidth = 3.5 + Math.sin(simTime * 2.5) * 1.5;
+            ctx.shadowColor = '#00f0ff';
+            ctx.shadowBlur = 28;
+            ctx.beginPath();
+            ctx.moveTo(cX, cY - 170);
+            ctx.lineTo(cX, cY + 175);
+            ctx.stroke();
+
+            // Symmetrical Cortical Silhouette Halos (Left and Right Hemispheres)
+            ctx.beginPath();
+            ctx.ellipse(cX - 95 * breathe, cY, 115 * breathe, 140 * breathe, 0, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(0, 240, 255, 0.035)';
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.ellipse(cX + 95 * breathe, cY, 115 * breathe, 140 * breathe, 0, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(251, 191, 36, 0.025)';
+            ctx.fill();
+            ctx.restore();
+
+            // 4. Internal Synaptic Neural Network (Filaments + Propagating Action Potentials)
+            ctx.save();
+            ctx.globalCompositeOperation = 'lighter';
+            synapticLinks.forEach(l => {
+                ctx.strokeStyle = l.color;
+                ctx.lineWidth = 0.7 * l.n1.scale;
+                ctx.globalAlpha = 0.22 + l.n1.firingIntensity * 0.4;
+                ctx.beginPath();
+                ctx.moveTo(l.n1.screenX, l.n1.screenY);
+                ctx.lineTo(l.n2.screenX, l.n2.screenY);
+                ctx.stroke();
+
+                // Synaptic Action Potential Spark
+                l.signalProg += l.signalSpeed;
+                if (l.signalProg > 1) {
+                    l.signalProg = 0;
+                    l.n2.firingIntensity = 1.0;
+                }
+                const px = l.n1.screenX + (l.n2.screenX - l.n1.screenX) * l.signalProg;
+                const py = l.n1.screenY + (l.n2.screenY - l.n1.screenY) * l.signalProg;
+
+                ctx.globalAlpha = 1.0;
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowColor = l.color;
+                ctx.shadowBlur = 8;
+                ctx.beginPath();
+                ctx.arc(px, py, 1.6 * l.n1.scale, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // Corpus Callosum Electrical Arcs (Jumping horizontally across fissure)
+            corpusCallosumLinks.forEach(c => {
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
+                ctx.shadowColor = '#00f0ff';
+                ctx.shadowBlur = 14;
+                ctx.lineWidth = 1.4;
+                ctx.globalAlpha = 0.3 + Math.sin(simTime * 3 + c.n1.id) * 0.3;
+
+                // Jittery electrical arc
+                const midX = (c.n1.screenX + c.n2.screenX) / 2;
+                const midY = (c.n1.screenY + c.n2.screenY) / 2 + (Math.random() - 0.5) * 8;
+
+                ctx.beginPath();
+                ctx.moveTo(c.n1.screenX, c.n1.screenY);
+                ctx.lineTo(midX, midY);
+                ctx.lineTo(c.n2.screenX, c.n2.screenY);
+                ctx.stroke();
+            });
+            ctx.restore();
+
+            // 5. Biological Neurons (Soma + Branching Dendrite Trees)
+            ctx.save();
+            ctx.globalCompositeOperation = 'lighter';
+            brainNeurons.forEach(n => {
+                const s = n.scale;
+                const rad = (n.somaRadius + n.firingIntensity * 3.5) * s;
+
+                // Branching Dendrites
+                ctx.strokeStyle = n.color;
+                ctx.lineWidth = 0.8 * s;
+                ctx.globalAlpha = 0.35 + n.firingIntensity * 0.45;
+                n.dendrites.forEach(d => {
+                    ctx.beginPath();
+                    ctx.moveTo(n.screenX, n.screenY);
+                    ctx.lineTo(n.screenX + d.dx * s, n.screenY + d.dy * s);
+                    ctx.lineTo(n.screenX + (d.dx + d.subDx) * s, n.screenY + (d.dy + d.subDy) * s);
+                    ctx.stroke();
+                });
+
+                // Neuron Soma (Cell body)
+                ctx.globalAlpha = 1.0;
+                ctx.fillStyle = n.firingIntensity > 0.4 ? '#ffffff' : n.color;
+                ctx.shadowColor = n.color;
+                ctx.shadowBlur = n.firingIntensity > 0.4 ? 18 : 7;
+                ctx.beginPath();
+                ctx.arc(n.screenX, n.screenY, rad, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            ctx.restore();
+
+            // 6. Whole Trajedor Nervous System: 7 Peripheral Nerve Trunks & Flowing Signals
+            ctx.save();
+            ctx.globalCompositeOperation = 'lighter';
+
+            nerveCables.forEach((c, idx) => {
+                const isHovered = (activeHoveredGateway === c.gatewayId);
+                const curSpeed = isHovered ? c.signalSpeed * 2.2 : c.signalSpeed;
+                const waveAmp = (c.waveAmp + (isHovered ? 15 : 0));
+                const wave = Math.sin(simTime * c.waveFreq + c.phaseOffset) * waveAmp;
+
+                // Control points for organic S-curve wavy nerve fiber
+                const midX = (c.origin.screenX + c.targetX) / 2;
+                const midY = (c.origin.screenY + c.targetY) / 2 + wave;
+
+                ctx.strokeStyle = c.color;
+                ctx.lineWidth = isHovered ? 2.2 : 1.2;
+                ctx.globalAlpha = isHovered ? 0.85 : (0.28 + Math.sin(simTime * 1.5 + idx) * 0.12);
+                ctx.shadowColor = c.color;
+                ctx.shadowBlur = isHovered ? 16 : 8;
+
+                ctx.beginPath();
+                ctx.moveTo(c.origin.screenX, c.origin.screenY);
+                ctx.quadraticCurveTo(midX, midY, c.targetX, c.targetY);
+                ctx.stroke();
+
+                // Signal Photon / Action Potential Traveling through the Nerve Cable
+                c.signalProg += curSpeed;
+                if (c.signalProg > 1.0) {
+                    c.signalProg = 0.0;
+                    if (c.isIncoming) {
+                        c.origin.firingIntensity = 1.0; // Synaptic arrival flash
+                    }
+                }
+
+                // Inbound travels from peripheral target INTO brain; Outbound travels from brain OUT
+                const p = c.isIncoming ? (1.0 - c.signalProg) : c.signalProg;
+                const px = (1 - p) * (1 - p) * c.origin.screenX + 2 * (1 - p) * p * midX + p * p * c.targetX;
+                const py = (1 - p) * (1 - p) * c.origin.screenY + 2 * (1 - p) * p * midY + p * p * c.targetY;
+
+                // Leading glowing comet photon
+                ctx.globalAlpha = 1.0;
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowColor = c.color;
+                ctx.shadowBlur = 18;
+                ctx.beginPath();
+                ctx.arc(px, py, isHovered ? 3.8 : 2.6, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Trailing photon tail
+                const pTail = c.isIncoming ? (1.0 - Math.max(0, c.signalProg - 0.04)) : Math.max(0, c.signalProg - 0.04);
+                const tx = (1 - pTail) * (1 - pTail) * c.origin.screenX + 2 * (1 - pTail) * pTail * midX + pTail * pTail * c.targetX;
+                const ty = (1 - pTail) * (1 - pTail) * c.origin.screenY + 2 * (1 - pTail) * pTail * midY + pTail * pTail * c.targetY;
+                ctx.strokeStyle = c.color;
+                ctx.lineWidth = 2.0;
+                ctx.beginPath();
+                ctx.moveTo(tx, ty);
+                ctx.lineTo(px, py);
+                ctx.stroke();
+
+                // Micro Data Flow Packet Badge (drawn on every 3rd nerve fiber)
+                if (idx % 3 === 0 && p > 0.25 && p < 0.75) {
+                    ctx.font = '600 9px JetBrains Mono';
+                    ctx.fillStyle = c.color;
+                    ctx.textAlign = 'center';
+                    const flowArrow = c.isIncoming ? '→' : '←';
+                    ctx.fillText(`${flowArrow} ${c.packetText}`, px, py - 8);
+                }
+            });
+            ctx.restore();
+
+            // 7. Central Holographic Cerebral Core Emblem (Exact match to reference "BULLION AI TRADER")
+            ctx.save();
+            ctx.shadowColor = '#00f0ff';
+            ctx.shadowBlur = 28;
+
+            ctx.fillStyle = 'rgba(3, 10, 28, 0.92)';
+            ctx.strokeStyle = 'rgba(0, 240, 255, 0.9)';
+            ctx.lineWidth = 1.8;
+            const badgeW = 210;
+            const badgeH = 46;
+            const rx = cX - badgeW / 2;
+            const ry = cY - badgeH / 2;
+
+            ctx.beginPath();
+            ctx.roundRect(rx, ry, badgeW, badgeH, 23);
+            ctx.fill();
+            ctx.stroke();
+
+            // Animated ECG Heartbeat Oscilloscope Wave
+            ctx.strokeStyle = '#00f0ff';
+            ctx.lineWidth = 2.2;
+            ctx.shadowBlur = 12;
+            ctx.beginPath();
+            const ecgOffset = (simTime * 40) % 20;
+            ctx.moveTo(cX - 82, cY);
+            ctx.lineTo(cX - 66, cY);
+            ctx.lineTo(cX - 56, cY - 11);
+            ctx.lineTo(cX - 46, cY + 11);
+            ctx.lineTo(cX - 36, cY);
+            ctx.lineTo(cX - 22, cY);
+            ctx.stroke();
+
+            // Typography in Badge
+            ctx.font = '800 13px Outfit';
+            ctx.fillStyle = '#ffffff';
+            ctx.textAlign = 'left';
+            ctx.fillText('TRAJEDOR BRAIN', cX - 16, cY + 1);
+
+            ctx.font = '600 8px JetBrains Mono';
+            ctx.fillStyle = 'rgba(56, 189, 248, 0.9)';
+            ctx.fillText('CEREBRAL NERVOUS SYSTEM', cX - 16, cY + 13);
+            ctx.restore();
+
+            requestAnimationFrame(renderNervousSystem);
+        }
+
+        // Initialize and start simulation
+        resizeCanvas();
+        renderNervousSystem();
+
+        // =====================================================================
+        // PAGE 2: COCKPIT CANDLESTICK CHART
+        // =====================================================================
+        function drawCockpitChart() {
+            const chartCanvas = document.getElementById('cockpitChartCanvas');
+            if (!chartCanvas) return;
+            const cCtx = chartCanvas.getContext('2d');
+            chartCanvas.width = chartCanvas.parentElement.clientWidth - 20;
+            chartCanvas.height = 270;
+            const w = chartCanvas.width;
+            const h = chartCanvas.height;
+
+            cCtx.clearRect(0, 0, w, h);
+
+            // Subtle Grid
+            cCtx.strokeStyle = 'rgba(56, 189, 248, 0.07)';
+            cCtx.lineWidth = 1;
+            for (let y = 30; y < h; y += 45) {
+                cCtx.beginPath();
+                cCtx.moveTo(0, y);
+                cCtx.lineTo(w, y);
+                cCtx.stroke();
+            }
+
+            const feed = window.__LATEST_CHART_FEED__;
+            const thesis = window.__LATEST_THESIS__;
+            let rawCandles = (feed && feed.candles && feed.candles.length > 0) ? feed.candles : null;
+
+            if (!rawCandles) {
+                // Fallback default candles if feed not yet arrived
+                rawCandles = [
+                    {open: 4136.5, high: 4138.2, low: 4135.0, close: 4137.8},
+                    {open: 4137.8, high: 4140.5, low: 4137.2, close: 4139.5},
+                    {open: 4139.5, high: 4141.0, low: 4138.0, close: 4138.5},
+                    {open: 4138.5, high: 4140.0, low: 4136.8, close: 4139.2},
+                    {open: 4139.2, high: 4142.5, low: 4138.5, close: 4141.8},
+                    {open: 4141.8, high: 4143.0, low: 4140.0, close: 4140.5}
+                ];
+            }
+
+            // Calculate min/max price for auto-scaling
+            let minP = Math.min(...rawCandles.map(c => c.low));
+            let maxP = Math.max(...rawCandles.map(c => c.high));
+
+            // Include SL/TP in price bounds if available
+            if (thesis) {
+                if (thesis.stop_loss) { minP = Math.min(minP, thesis.stop_loss); maxP = Math.max(maxP, thesis.stop_loss); }
+                if (thesis.take_profit_1) { minP = Math.min(minP, thesis.take_profit_1); maxP = Math.max(maxP, thesis.take_profit_1); }
+                if (thesis.entry_price) { minP = Math.min(minP, thesis.entry_price); maxP = Math.max(maxP, thesis.entry_price); }
+            }
+            const pRange = Math.max(maxP - minP, 2.0);
+            const padTop = 30;
+            const padBot = 30;
+            const chartH = h - padTop - padBot;
+
+            function toY(price) {
+                return padTop + chartH * (1.0 - (price - minP) / pRange);
+            }
+
+            // 1. Draw Support & Resistance Zones
+            const supP = feed ? feed.support : minP;
+            const resP = feed ? feed.resistance : maxP;
+
+            // Resistance Line
+            const resY = toY(resP);
+            cCtx.strokeStyle = 'rgba(244, 63, 94, 0.65)';
+            cCtx.lineWidth = 1.2;
+            cCtx.setLineDash([4, 4]);
+            cCtx.beginPath();
+            cCtx.moveTo(40, resY);
+            cCtx.lineTo(w - 20, resY);
+            cCtx.stroke();
+            cCtx.setLineDash([]);
+            cCtx.font = '600 9px JetBrains Mono';
+            cCtx.fillStyle = '#f43f5e';
+            cCtx.fillText(`RESISTANCE $${resP.toFixed(2)}`, w - 125, Math.max(14, resY - 4));
+
+            // Support Line
+            const supY = toY(supP);
+            cCtx.strokeStyle = 'rgba(16, 185, 129, 0.65)';
+            cCtx.lineWidth = 1.2;
+            cCtx.setLineDash([4, 4]);
+            cCtx.beginPath();
+            cCtx.moveTo(40, supY);
+            cCtx.lineTo(w - 20, supY);
+            cCtx.stroke();
+            cCtx.setLineDash([]);
+            cCtx.font = '600 9px JetBrains Mono';
+            cCtx.fillStyle = '#10b981';
+            cCtx.fillText(`SUPPORT $${supP.toFixed(2)}`, w - 110, Math.min(h - 6, supY + 12));
+
+            // 2. Draw Order Block & FVG Shaded Overlays
+            if (thesis && thesis.order_blocks) {
+                thesis.order_blocks.forEach(ob => {
+                    const obTop = toY(ob.high);
+                    const obBot = toY(ob.low);
+                    const obH = Math.max(6, obBot - obTop);
+                    const isBull = ob.type.includes('BULL');
+                    cCtx.fillStyle = isBull ? 'rgba(0, 240, 255, 0.12)' : 'rgba(245, 158, 11, 0.12)';
+                    cCtx.strokeStyle = isBull ? 'rgba(0, 240, 255, 0.5)' : 'rgba(245, 158, 11, 0.5)';
+                    cCtx.lineWidth = 1.2;
+                    cCtx.fillRect(60, obTop, w - 100, obH);
+                    cCtx.strokeRect(60, obTop, w - 100, obH);
+                    cCtx.font = '600 9px Outfit';
+                    cCtx.fillStyle = isBull ? '#00f0ff' : '#f59e0b';
+                    cCtx.fillText(`${ob.type} ($${ob.low.toFixed(2)} - $${ob.high.toFixed(2)})`, 70, obTop + Math.min(14, obH - 2));
+                });
+            }
+
+            // 3. Draw Trade Target & SL Overlays (if active setup)
+            if (thesis && thesis.action && thesis.action !== 'STANDBY') {
+                const entryY = toY(thesis.entry_price);
+                const slY = toY(thesis.stop_loss);
+                const tpY = toY(thesis.take_profit_1);
+
+                // Entry
+                cCtx.strokeStyle = '#00f0ff';
+                cCtx.lineWidth = 1.5;
+                cCtx.beginPath(); cCtx.moveTo(50, entryY); cCtx.lineTo(w - 30, entryY); cCtx.stroke();
+                cCtx.fillText(`ENTRY: $${thesis.entry_price.toFixed(2)}`, 55, entryY - 4);
+
+                // SL
+                cCtx.strokeStyle = '#f43f5e';
+                cCtx.lineWidth = 1.5;
+                cCtx.beginPath(); cCtx.moveTo(50, slY); cCtx.lineTo(w - 30, slY); cCtx.stroke();
+                cCtx.fillText(`SL: $${thesis.stop_loss.toFixed(2)}`, 55, slY - 4);
+
+                // TP1
+                cCtx.strokeStyle = '#10b981';
+                cCtx.lineWidth = 1.5;
+                cCtx.beginPath(); cCtx.moveTo(50, tpY); cCtx.lineTo(w - 30, tpY); cCtx.stroke();
+                cCtx.fillText(`TP1: $${thesis.take_profit_1.toFixed(2)}`, 55, tpY - 4);
+            }
+
+            // 4. Draw Real Candlesticks
+            const candleCount = rawCandles.length;
+            const barW = Math.max(4, Math.min(14, Math.floor((w - 120) / candleCount * 0.7)));
+            const step = (w - 120) / candleCount;
+
+            rawCandles.forEach((c, idx) => {
+                const x = 50 + idx * step;
+                const isGreen = c.close >= c.open;
+                const col = isGreen ? '#10b981' : '#f43f5e';
+
+                const oY = toY(c.open);
+                const cY = toY(c.close);
+                const hY = toY(c.high);
+                const lY = toY(c.low);
+
+                // High-Low Wick
+                cCtx.strokeStyle = col;
+                cCtx.lineWidth = 1.2;
+                cCtx.beginPath();
+                cCtx.moveTo(x + barW / 2, hY);
+                cCtx.lineTo(x + barW / 2, lY);
+                cCtx.stroke();
+
+                // Candle Body
+                cCtx.fillStyle = col;
+                const top = Math.min(oY, cY);
+                const bot = Math.max(oY, cY);
+                cCtx.fillRect(x, top, barW, Math.max(2, bot - top));
+            });
+        }
+
+        function toggleJarvisVoice() {
+            const synth = window.speechSynthesis;
+            if (!synth) {
+                alert("Speech Synthesis not supported by this browser.");
+                return;
+            }
+            const utter = new SpeechSynthesisUtterance("Trajedor Cerebral Nervous System online. All six peripheral sensory nerve paths synchronized. Trade Doctor defense active. Ready for sniper execution.");
+            utter.rate = 1.05;
+            utter.pitch = 0.95;
+            synth.speak(utter);
+
+            const btnText = document.getElementById('voice-btn-label');
+            btnText.innerText = "JARVIS TRANSMITTING AUDIO...";
+            setTimeout(() => {
+                btnText.innerText = "INTERCOM: SPEAK WITH JARVIS";
+            }, 5000);
+        }
+
+        // =====================================================================
+        // FLEET ACCOUNT RISK CONTROLS & LOT METERS
+        // =====================================================================
+        // Track per-account armed state (keyed by accId e.g. 'acc_1')
+        const _accountArmedState = { acc_1: true, acc_2: true, acc_3: true };
+        const _dirtyInputs = new Set();
+        const _inputsInitialized = {};
+
+        function validateNumericInput(inputEl, allowDecimals) {
+            if (!inputEl) return;
+            if (allowDecimals) {
+                // Keep only digits and at most one decimal point
+                let v = inputEl.value.replace(/[^0-9.]/g, '');
+                const parts = v.split('.');
+                if (parts.length > 2) {
+                    v = parts[0] + '.' + parts.slice(1).join('');
+                }
+                inputEl.value = v;
+            } else {
+                // Integers only
+                inputEl.value = inputEl.value.replace(/[^0-9]/g, '');
+            }
+            _dirtyInputs.add(inputEl.id);
+        }
+
+        function markInputDirty(inputEl) {
+            if (inputEl) _dirtyInputs.add(inputEl.id);
+        }
+
+        function _applyPowerButtonState(accKey, isArmed) {
+            const accId = typeof accKey === 'string' && accKey.startsWith('acc_') ? accKey : `acc_${accKey}`;
+            const num = accId.replace('acc_', '');
+            _accountArmedState[accId] = isArmed;
+
+            const btn = document.getElementById(`pwr-${accId}`) || document.getElementById(`pwr-acc${num}`);
+            const label = document.getElementById(`pwr-label-${accId}`) || document.getElementById(`pwr-label-acc${num}`);
+            const card = document.getElementById(`acc-card-${accId}`) || document.getElementById(`acc-card-${num}`);
+
+            if (btn) {
+                if (isArmed) {
+                    btn.classList.remove('is-off');
+                } else {
+                    btn.classList.add('is-off');
+                }
+            }
+            if (label) {
+                label.innerText = isArmed ? 'ARMED' : 'DISARMED';
+            }
+            if (card) {
+                if (isArmed) {
+                    card.classList.remove('is-disarmed');
+                } else {
+                    card.classList.add('is-disarmed');
+                }
+            }
+        }
+
+        async function toggleAccountPower(accKey) {
+            const accId = typeof accKey === 'string' && accKey.startsWith('acc_') ? accKey : `acc_${accKey}`;
+            const currentState = _accountArmedState[accId] !== undefined ? _accountArmedState[accId] : true;
+            const newState = !currentState;
+
+            // Optimistically update UI
+            _applyPowerButtonState(accId, newState);
+
+            // Persist to server
+            const payload = {
+                acc_id: accId,
+                limits: { is_active: newState }
+            };
+            try {
+                const res = await fetch('/api/trajedor/accounts/limits', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                if (data.status !== 'SUCCESS') {
+                    _applyPowerButtonState(accId, currentState);
+                    console.warn('Failed to persist power toggle:', data);
+                }
+            } catch (err) {
+                _applyPowerButtonState(accId, currentState);
+                console.error('Power toggle API error:', err);
+            }
+        }
+
+        function updateAccountMeter(accKey, accData) {
+            if (!accData) return;
+            const accId = typeof accKey === 'string' && accKey.startsWith('acc_') ? accKey : `acc_${accKey}`;
+            const num = accId.replace('acc_', '');
+            const curLots = Number(accData.current_ai_lots || 0).toFixed(2);
+            const maxLots = Number(accData.max_aggregate_lot !== undefined ? accData.max_aggregate_lot : 0.30).toFixed(2);
+            const curPos = accData.current_ai_pos_count || 0;
+            const maxPos = accData.max_concurrent_positions !== undefined ? accData.max_concurrent_positions : 3;
+
+            const curr = accData.currency || 'USD';
+            const currSymbol = curr === 'EUR' ? '€' : '$';
+
+            const bEl = document.getElementById(`v-b-${accId}`) || document.getElementById(`v-b${num}`);
+            const eEl = document.getElementById(`v-e-${accId}`) || document.getElementById(`v-e${num}`);
+            if (bEl && accData.balance !== undefined) bEl.innerText = `${currSymbol}${Number(accData.balance).toFixed(2)}`;
+            if (eEl && accData.equity !== undefined) eEl.innerText = `${currSymbol}${Number(accData.equity).toFixed(2)}`;
+
+            // Dynamically refresh trader name, server, broker, login, and status
+            const meta = resolveAccountMeta(accId, accData);
+            const holderEl = document.getElementById(`v-holder-${accId}`);
+            if (holderEl && meta.trader) holderEl.innerText = meta.trader.toUpperCase();
+
+            const servEl = document.getElementById(`v-server-${accId}`);
+            if (servEl && meta.server) servEl.innerText = meta.server;
+
+            const brokEl = document.getElementById(`v-broker-${accId}`);
+            if (brokEl && meta.broker) brokEl.innerText = meta.broker;
+
+            const loginEl = document.getElementById(`v-login-${accId}`);
+            if (loginEl && meta.login) loginEl.innerText = `#${meta.login}`;
+
+            const statusEl = document.getElementById(`v-status-${accId}`);
+            const dotEl = document.getElementById(`v-dot-${accId}`);
+            const isConn = (accData.status || 'CONNECTED') === 'CONNECTED';
+            const statusStr = accData.status || (isConn ? 'CONNECTED' : 'OFFLINE');
+            const statusColor = isConn ? 'var(--neural-emerald)' : (statusStr === 'DISARMED' ? 'var(--neural-gold)' : '#f43f5e');
+            if (statusEl) {
+                statusEl.innerText = `● ${statusStr}`;
+                statusEl.style.color = statusColor;
+            }
+            if (dotEl) {
+                dotEl.style.background = statusColor;
+                dotEl.style.boxShadow = `0 0 8px ${statusColor}`;
+            }
+
+            const lotsEl = document.getElementById(`v-lots-${accId}`) || document.getElementById(`v-lots-${num}`);
+            const maxLotsEl = document.getElementById(`v-maxlot-label-${accId}`) || document.getElementById(`v-maxlot-label-${num}`);
+            const meterEl = document.getElementById(`v-meter-${accId}`) || document.getElementById(`v-meter-${num}`);
+            const posEl = document.getElementById(`v-pos-${accId}`) || document.getElementById(`v-pos-${num}`);
+            const maxPosEl = document.getElementById(`v-maxpos-label-${accId}`) || document.getElementById(`v-maxpos-label-${num}`);
+
+            if (lotsEl) lotsEl.innerText = curLots;
+            if (maxLotsEl) maxLotsEl.innerText = maxLots;
+            if (posEl) posEl.innerText = curPos;
+            if (maxPosEl) maxPosEl.innerText = maxPos;
+
+            if (meterEl) {
+                const maxVal = parseFloat(maxLots) || 0.01;
+                const pct = Math.min(100, Math.max(0, (parseFloat(curLots) / maxVal) * 100));
+                meterEl.style.width = `${pct}%`;
+                if (pct >= 90) {
+                    meterEl.style.background = 'linear-gradient(90deg, #f59e0b, #f43f5e)';
+                } else {
+                    meterEl.style.background = 'linear-gradient(90deg, var(--neural-cyan), var(--neural-emerald))';
+                }
+            }
+
+            // Sync power button state
+            if (accData.is_active !== undefined) {
+                _applyPowerButtonState(accId, accData.is_active);
+            }
+
+            // Populate input values only if user is NOT currently editing them and hasn't changed them
+            const targetInp = document.getElementById(`ctrl-${accId}-target`) || document.getElementById(`ctrl-acc${num}-target`);
+            if (targetInp && (!_inputsInitialized[accId] || (!_dirtyInputs.has(targetInp.id) && document.activeElement !== targetInp))) {
+                if (accData.daily_target !== undefined) {
+                    targetInp.value = accData.daily_target;
+                }
+            }
+
+            const maxLossInp = document.getElementById(`ctrl-${accId}-maxloss`) || document.getElementById(`ctrl-acc${num}-maxloss`);
+            if (maxLossInp && (!_inputsInitialized[accId] || (!_dirtyInputs.has(maxLossInp.id) && document.activeElement !== maxLossInp))) {
+                if (accData.daily_max_loss !== undefined) {
+                    maxLossInp.value = accData.daily_max_loss;
+                }
+            }
+
+            const maxLotInp = document.getElementById(`ctrl-${accId}-maxlot`) || document.getElementById(`ctrl-acc${num}-maxlot`);
+            if (maxLotInp && (!_inputsInitialized[accId] || (!_dirtyInputs.has(maxLotInp.id) && document.activeElement !== maxLotInp))) {
+                if (accData.max_aggregate_lot !== undefined) {
+                    maxLotInp.value = accData.max_aggregate_lot;
+                }
+            }
+
+            const singleLotInp = document.getElementById(`ctrl-${accId}-singlelot`) || document.getElementById(`ctrl-acc${num}-singlelot`);
+            if (singleLotInp && (!_inputsInitialized[accId] || (!_dirtyInputs.has(singleLotInp.id) && document.activeElement !== singleLotInp))) {
+                if (accData.max_single_trade_lot !== undefined) {
+                    singleLotInp.value = accData.max_single_trade_lot;
+                }
+            }
+
+            const maxPosInp = document.getElementById(`ctrl-${accId}-maxpos`) || document.getElementById(`ctrl-acc${num}-maxpos`);
+            if (maxPosInp && (!_inputsInitialized[accId] || (!_dirtyInputs.has(maxPosInp.id) && document.activeElement !== maxPosInp))) {
+                if (accData.max_concurrent_positions !== undefined) {
+                    maxPosInp.value = accData.max_concurrent_positions;
+                }
+            }
+
+            const stratSel = document.getElementById(`ctrl-${accId}-strategy`) || document.getElementById(`ctrl-acc${num}-strategy`);
+            if (stratSel && (!_inputsInitialized[accId] || (!_dirtyInputs.has(stratSel.id) && document.activeElement !== stratSel))) {
+                if (accData.scaling_strategy) {
+                    stratSel.value = accData.scaling_strategy;
+                }
+            }
+
+            if (accData.max_aggregate_lot !== undefined) {
+                _inputsInitialized[accId] = true;
+            }
+        }
+
+        async function saveAccountLimits(accKey) {
+            const accId = typeof accKey === 'string' && accKey.startsWith('acc_') ? accKey : `acc_${accKey}`;
+            const num = accId.replace('acc_', '');
+            const targetEl = document.getElementById(`ctrl-${accId}-target`) || document.getElementById(`ctrl-acc${num}-target`);
+            const maxlossEl = document.getElementById(`ctrl-${accId}-maxloss`) || document.getElementById(`ctrl-acc${num}-maxloss`);
+            const maxlotEl = document.getElementById(`ctrl-${accId}-maxlot`) || document.getElementById(`ctrl-acc${num}-maxlot`);
+            const singlelotEl = document.getElementById(`ctrl-${accId}-singlelot`) || document.getElementById(`ctrl-acc${num}-singlelot`);
+            const maxposEl = document.getElementById(`ctrl-${accId}-maxpos`) || document.getElementById(`ctrl-acc${num}-maxpos`);
+            const stratEl = document.getElementById(`ctrl-${accId}-strategy`) || document.getElementById(`ctrl-acc${num}-strategy`);
+            const btn = document.getElementById(`btn-save-${accId}`) || document.getElementById(`btn-save-acc${num}`);
+
+            const dailyTargetVal = parseFloat(targetEl ? targetEl.value : 0) || 100.0;
+            const dailyMaxLossVal = parseFloat(maxlossEl ? maxlossEl.value : 0) || 50.0;
+            const maxLotVal = parseFloat(maxlotEl ? maxlotEl.value : 0) || 0.20;
+            const singleLotVal = parseFloat(singlelotEl ? singlelotEl.value : 0) || 0.05;
+            const maxPosVal = parseInt(maxposEl ? maxposEl.value : 0) || 3;
+            const stratVal = stratEl ? stratEl.value : "AI_DYNAMIC_PYRAMID";
+
+            // Update UI labels and meter instantly for immediate user feedback
+            const maxLotsEl = document.getElementById(`v-maxlot-label-${accId}`) || document.getElementById(`v-maxlot-label-${num}`);
+            const maxPosEl = document.getElementById(`v-maxpos-label-${accId}`) || document.getElementById(`v-maxpos-label-${num}`);
+            if (maxLotsEl) maxLotsEl.innerText = maxLotVal.toFixed(2);
+            if (maxPosEl) maxPosEl.innerText = maxPosVal;
+
+            const curLots = parseFloat(document.getElementById(`v-lots-${accId}`)?.innerText || document.getElementById(`v-lots-${num}`)?.innerText || '0') || 0;
+            const meterEl = document.getElementById(`v-meter-${accId}`) || document.getElementById(`v-meter-${num}`);
+            if (meterEl) {
+                const pct = Math.min(100, Math.max(0, (curLots / maxLotVal) * 100));
+                meterEl.style.width = `${pct}%`;
+            }
+
+            const isArmed = _accountArmedState[accId] !== undefined ? _accountArmedState[accId] : true;
+
+            const payload = {
+                acc_id: accId,
+                limits: {
+                    is_active: isArmed,
+                    daily_target: dailyTargetVal,
+                    daily_max_loss: dailyMaxLossVal,
+                    max_aggregate_lot: maxLotVal,
+                    max_single_trade_lot: singleLotVal,
+                    max_concurrent_positions: maxPosVal,
+                    scaling_strategy: stratVal
+                }
+            };
+
+            if (btn) {
+                btn.innerHTML = `<span>⏳ SAVING...</span>`;
+                btn.style.opacity = "0.7";
+            }
+
+            try {
+                const res = await fetch('/api/trajedor/accounts/limits', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const resData = await res.json();
+                if (btn) {
+                    if (resData.status === 'SUCCESS') {
+                        if (targetEl) _dirtyInputs.delete(targetEl.id);
+                        if (maxlossEl) _dirtyInputs.delete(maxlossEl.id);
+                        if (maxlotEl) _dirtyInputs.delete(maxlotEl.id);
+                        if (singlelotEl) _dirtyInputs.delete(singlelotEl.id);
+                        if (maxposEl) _dirtyInputs.delete(maxposEl.id);
+                        if (stratEl) _dirtyInputs.delete(stratEl.id);
+
+                        btn.innerHTML = `<span>✓ LIMITS SAVED</span>`;
+                        btn.style.background = "linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(5, 150, 105, 0.6))";
+                        btn.style.borderColor = "var(--neural-emerald)";
+                        btn.style.color = "#fff";
+                        btn.style.opacity = "1";
+                        setTimeout(() => {
+                            btn.innerHTML = `<span>⚡ SAVE LIMITS</span>`;
+                            btn.style.background = "";
+                            btn.style.borderColor = "";
+                            btn.style.color = "";
+                        }, 2500);
+                    } else {
+                        btn.innerHTML = `<span>SAVE FAILED</span>`;
+                        btn.style.background = "rgba(244, 63, 94, 0.4)";
+                        btn.style.opacity = "1";
+                        setTimeout(() => {
+                            btn.innerHTML = `<span>⚡ SAVE LIMITS</span>`;
+                            btn.style.background = "";
+                        }, 2500);
+                    }
+                }
+            } catch (err) {
+                console.error("Error saving limits:", err);
+                if (btn) {
+                    btn.innerHTML = `<span>CONNECTION ERR</span>`;
+                    btn.style.opacity = "1";
+                    setTimeout(() => {
+                        btn.innerHTML = `<span>⚡ SAVE LIMITS</span>`;
+                    }, 2500);
+                }
+            }
+        }
+
+        const KNOWN_ACCOUNT_INFO = {
+            '52053251': { trader: 'amar vijay patil', server: 'GTCGlobalSA-Server 2', broker: 'GTC Global SA (Pty) Ltd' },
+            '8065799': { trader: 'AMOL AMBADAS TAWADE', server: 'ICMarketsSC-MT5-3', broker: 'IC Markets (Raw Trading Ltd)' }
+        };
+
+        function resolveAccountMeta(accId, accData) {
+            if (!accData) return { server: 'MT5 Server', trader: 'ACCOUNT HOLDER', broker: 'Broker', login: 'N/A' };
+            const login = accData.login ? String(accData.login) : '';
+            const known = KNOWN_ACCOUNT_INFO[login] || {};
+            
+            let serv = accData.server || known.server || accData.name || accId;
+            let trader = accData.trader_name || known.trader || 'ACCOUNT HOLDER';
+            let broker = accData.broker || known.broker || accData.company || serv;
+
+            if (serv.includes('GTC') && !broker.includes('GTC')) {
+                broker = 'GTC Global SA (Pty) Ltd';
+            } else if (serv.includes('ICMarkets') && !broker.includes('IC Markets')) {
+                broker = 'IC Markets (Raw Trading Ltd)';
+            }
+            if (login === '52053251' && (!trader || trader === 'ACCOUNT HOLDER' || trader.toLowerCase() === 'trader')) {
+                trader = 'amar vijay patil';
+            }
+            if (login === '8065799' && (!trader || trader === 'ACCOUNT HOLDER' || trader.toLowerCase() === 'trader')) {
+                trader = 'AMOL AMBADAS TAWADE';
+            }
+
+            return { server: serv, trader: trader, broker: broker, login: login };
+        }
+
+        function syncCortexAccounts(accounts) {
+            const strip = document.getElementById('cortex-accounts-strip');
+            if (!strip) return;
+            const accIds = Object.keys(accounts || {});
+            const badge = document.getElementById('cortex-fleet-badge');
+            if (badge) badge.innerText = `${accIds.length} ACTIVE TERMINALS`;
+
+            if (accIds.length === 0) {
+                strip.innerHTML = '<div style="color: #64748b; font-size: 11px;">No active terminals detected on PC.</div>';
+                return;
+            }
+            strip.innerHTML = accIds.map(accId => {
+                const a = accounts[accId] || {};
+                const curr = a.currency || 'USD';
+                const currSymbol = curr === 'EUR' ? '€' : '$';
+                const eq = a.equity !== undefined ? `${currSymbol}${Number(a.equity).toFixed(2)}` : '0.00';
+                const meta = resolveAccountMeta(accId, a);
+                const serv = meta.server;
+                const trader = meta.trader;
+                const broker = meta.broker;
+                const login = meta.login || 'LIVE';
+                return `
+                <div style="background: rgba(2, 6, 23, 0.6); padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.2); min-width: 175px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+                        <span style="color: #fff; font-weight: 700; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${serv}</span>
+                        <span style="color: var(--neural-cyan); font-size: 10px; font-family: var(--font-mono); font-weight: 700;">#${login}</span>
+                    </div>
+                    <div style="color: #38bdf8; font-size: 10px; font-weight: 600; margin-top: 3px; text-transform: uppercase; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">👤 ${trader}</div>
+                    <div style="color: var(--neural-emerald); font-weight: 700; font-size: 13px; margin-top: 4px;">${eq}</div>
+                    <div style="color: #64748b; font-size: 9px; font-family: var(--font-mono);">${a.broker || serv} &bull; ${a.status || 'CONNECTED'}</div>
+                </div>`;
+            }).join('');
+        }
+
+        function syncFleetAccounts(accounts) {
+            const container = document.getElementById('fleet-terminals-grid');
+            if (!container) return;
+
+            const accIds = Object.keys(accounts || {});
+            const countLabel = document.getElementById('fleet-account-count');
+            if (countLabel) countLabel.innerText = `${accIds.length} MT5 INSTANCES`;
+
+            // Remove cards for any account that no longer exists in the detected fleet
+            const existingCards = container.querySelectorAll('.account-control-card');
+            existingCards.forEach(card => {
+                const cardAccId = card.id.replace('acc-card-', '');
+                if (!accIds.includes(cardAccId)) {
+                    card.remove();
+                }
+            });
+
+            if (accIds.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; background: rgba(15, 23, 42, 0.4); border: 1px dashed rgba(56, 189, 248, 0.3); border-radius: 12px;">
+                        <div style="font-family: var(--font-display); font-size: 14px; font-weight: 700; color: #94a3af; margin-bottom: 8px;">NO RUNNING MT5 TERMINALS DETECTED ON PC</div>
+                        <div style="font-size: 12px; color: #64748b; max-width: 480px; margin: 0 auto;">Launch MetaTrader 5 on your PC, then click "AUTO-DETECT NEW TERMINALS" above.</div>
+                    </div>`;
+                return;
+            } else {
+                const emptyBanner = container.querySelector('div[style*="grid-column: 1 / -1"]');
+                if (emptyBanner) emptyBanner.remove();
+            }
+
+            // For each account, if its card doesn't exist yet, render it dynamically
+            accIds.forEach(accId => {
+                let card = document.getElementById(`acc-card-${accId}`);
+                if (!card) {
+                    const accData = accounts[accId];
+                    const num = accId.replace('acc_', '');
+                    const curr = accData.currency || 'USD';
+                    const currSymbol = curr === 'EUR' ? '€' : '$';
+                    const magic = accData.magic_number || (888990 + (parseInt(num) || 1));
+                    const isConn = (accData.status || 'CONNECTED') === 'CONNECTED';
+                    const statusStr = accData.status || (isConn ? 'CONNECTED' : 'OFFLINE');
+                    const statusColor = isConn ? 'var(--neural-emerald)' : (statusStr === 'DISARMED' ? 'var(--neural-gold)' : '#f43f5e');
+                    const login = (accData.login && accData.login !== 0) ? accData.login : (isConn ? 'LIVE' : 'OFFLINE');
+                    const meta = resolveAccountMeta(accId, accData);
+                    const serverName = meta.server;
+                    const brokerName = meta.broker;
+                    const traderName = meta.trader;
+
+                    const cardHtml = `
+                    <div class="account-control-card" id="acc-card-${accId}">
+                        <div>
+                            <!-- Server & Power Button Row -->
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; gap: 8px;">
+                                <div>
+                                    <div style="font-family: var(--font-display); font-size: 15px; font-weight: 800; color: #fff; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">
+                                        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: ${statusColor}; box-shadow: 0 0 8px ${statusColor};" id="v-dot-${accId}"></span>
+                                        <span id="v-server-${accId}">${serverName}</span>
+                                    </div>
+                                    <div style="font-size: 11px; color: #94a3af; margin-top: 2px;" id="v-broker-${accId}">
+                                        ${brokerName}
+                                    </div>
+                                </div>
+                                <button class="power-toggle-btn" id="pwr-${accId}" onclick="toggleAccountPower('${accId}')" title="Toggle Trajedor trading on this account">
+                                    <svg viewBox="0 0 24 24" class="pwr-icon"><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
+                                    <span class="pwr-label" id="pwr-label-${accId}">ARMED</span>
+                                </button>
+                            </div>
+
+                            <!-- Account Holder & Account Number Badge Row -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(15, 23, 42, 0.6); padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.2); margin-bottom: 10px;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span style="font-size: 16px;">👤</span>
+                                    <div>
+                                        <div style="font-size: 12px; font-weight: 700; color: #f8fafc; text-transform: uppercase;" id="v-holder-${accId}">
+                                            ${traderName}
+                                        </div>
+                                        <div style="font-size: 10px; color: #64748b; font-family: var(--font-mono);">
+                                            ACCOUNT HOLDER
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--neural-cyan);" id="v-login-${accId}">
+                                        #${login}
+                                    </div>
+                                    <div style="font-size: 9px; color: #64748b; font-family: var(--font-mono);">
+                                        MAGIC: ${magic} &bull; ${curr}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Connection Status Pill -->
+                            <div style="display: flex; align-items: center; gap: 8px; font-size: 11px; margin-bottom: 10px; color: #64748b;">
+                                <span style="color: ${statusColor}; font-weight: 700;" id="v-status-${accId}">● ${statusStr}</span>
+                                <span>&bull;</span>
+                                <span style="color: #94a3af;">Execution Bridge Ready</span>
+                            </div>
+
+                            <div class="datum-row"><span class="datum-name">Balance:</span><span class="datum-val" id="v-b-${accId}">${currSymbol}${Number(accData.balance || 0).toFixed(2)}</span></div>
+                            <div class="datum-row"><span class="datum-name">Equity:</span><span class="datum-val" style="color: var(--neural-emerald);" id="v-e-${accId}">${currSymbol}${Number(accData.equity || 0).toFixed(2)}</span></div>
+
+                            <!-- Exposure & Position Meter -->
+                            <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 8px; margin-top: 8px;">
+                                <div style="display: flex; justify-content: space-between; font-size: 11px;">
+                                    <span style="color: #94a3af;">AI Lot Exposure:</span>
+                                    <span style="color: var(--neural-cyan); font-family: var(--font-mono); font-weight: 700;"><span id="v-lots-${accId}">0.00</span> / <span id="v-maxlot-label-${accId}">${Number(accData.max_aggregate_lot || 0.20).toFixed(2)}</span> Lots</span>
+                                </div>
+                                <div class="meter-bar-container">
+                                    <div class="meter-bar-fill" id="v-meter-${accId}" style="width: 0%;"></div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; font-size: 10px; color: #64748b; margin-bottom: 10px;">
+                                    <span>Open AI Positions:</span>
+                                    <span style="color: #fff; font-family: var(--font-mono);"><span id="v-pos-${accId}">0</span> / <span id="v-maxpos-label-${accId}">${accData.max_concurrent_positions || 3}</span> Max</span>
+                                </div>
+                            </div>
+
+                            <!-- Risk Limits Inputs -->
+                            <div class="risk-input-group">
+                                <span class="risk-input-label">Daily Profit Target (${currSymbol}):</span>
+                                <input id="ctrl-${accId}-target" type="text" inputmode="decimal" class="risk-input-field" autocomplete="off" spellcheck="false" placeholder="100.0" value="${accData.daily_target !== undefined ? accData.daily_target : 100.0}" oninput="validateNumericInput(this, true)">
+                            </div>
+                            <div class="risk-input-group">
+                                <span class="risk-input-label">Daily Max Loss Limit (${currSymbol}):</span>
+                                <input id="ctrl-${accId}-maxloss" type="text" inputmode="decimal" class="risk-input-field" autocomplete="off" spellcheck="false" placeholder="50.0" value="${accData.daily_max_loss !== undefined ? accData.daily_max_loss : 50.0}" oninput="validateNumericInput(this, true)">
+                            </div>
+                            <div class="risk-input-group">
+                                <span class="risk-input-label">Max Aggregate Exposure:</span>
+                                <input id="ctrl-${accId}-maxlot" type="text" inputmode="decimal" class="risk-input-field" autocomplete="off" spellcheck="false" placeholder="0.20" value="${accData.max_aggregate_lot !== undefined ? accData.max_aggregate_lot : 0.20}" oninput="validateNumericInput(this, true)">
+                            </div>
+                            <div class="risk-input-group">
+                                <span class="risk-input-label">Max Single Entry Lot:</span>
+                                <input id="ctrl-${accId}-singlelot" type="text" inputmode="decimal" class="risk-input-field" autocomplete="off" spellcheck="false" placeholder="0.05" value="${accData.max_single_trade_lot !== undefined ? accData.max_single_trade_lot : 0.05}" oninput="validateNumericInput(this, true)">
+                            </div>
+                            <div class="risk-input-group">
+                                <span class="risk-input-label">Max Open Positions:</span>
+                                <input id="ctrl-${accId}-maxpos" type="text" inputmode="numeric" class="risk-input-field" autocomplete="off" spellcheck="false" placeholder="3" value="${accData.max_concurrent_positions !== undefined ? accData.max_concurrent_positions : 3}" oninput="validateNumericInput(this, false)">
+                            </div>
+                            <div style="font-size: 10px; color: #94a3af; margin-top: 6px;">Multi-Trade Scaling Strategy:</div>
+                            <select id="ctrl-${accId}-strategy" class="risk-select-field" onchange="markInputDirty(this)">
+                                <option value="AI_DYNAMIC_PYRAMID" ${(accData.scaling_strategy || '') === 'AI_DYNAMIC_PYRAMID' ? 'selected' : ''}>AI Dynamic Scaling (Add on Profit / Pullback)</option>
+                                <option value="CONSERVATIVE_SINGLE" ${(accData.scaling_strategy || '') === 'CONSERVATIVE_SINGLE' ? 'selected' : ''}>Conservative Single Entry (1 Trade Only)</option>
+                                <option value="DCA_AVERAGING" ${(accData.scaling_strategy || '') === 'DCA_AVERAGING' ? 'selected' : ''}>DCA Scaling (Average Entry on Invalidation)</option>
+                            </select>
+                        </div>
+                        <button class="btn-save-limits" id="btn-save-${accId}" onclick="saveAccountLimits('${accId}')">
+                            <span>⚡ SAVE ${serverName.split(' ')[0].toUpperCase()} LIMITS</span>
+                        </button>
+                    </div>`;
+                    container.insertAdjacentHTML('beforeend', cardHtml);
+                }
+
+                // Update meters and live data
+                updateAccountMeter(accId, accounts[accId]);
+            });
+        }
+
+        async function triggerTerminalScan() {
+            const btn = document.getElementById('btn-scan-terminals');
+            if (btn) {
+                btn.classList.add('scanning');
+                btn.innerHTML = `<svg viewBox="0 0 24 24" class="scan-icon"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg><span>SCANNING WINDOWS PROCESSES...</span>`;
+            }
+
+            try {
+                const res = await fetch('/api/trajedor/accounts/discover');
+                const data = await res.json();
+                if (data.accounts) {
+                    syncFleetAccounts(data.accounts);
+                    syncCortexAccounts(data.accounts);
+                }
+                if (btn) {
+                    if (data.newly_discovered > 0) {
+                        btn.innerHTML = `<span>✓ DETECTED +${data.newly_discovered} NEW TERMINAL(S)!</span>`;
+                        btn.style.borderColor = 'var(--neural-emerald)';
+                    } else {
+                        btn.innerHTML = `<span>✓ ALL ${data.total_terminals} TERMINALS SYNCHRONIZED</span>`;
+                    }
+                    setTimeout(() => {
+                        btn.classList.remove('scanning');
+                        btn.innerHTML = `<svg viewBox="0 0 24 24" class="scan-icon"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg><span>AUTO-DETECT NEW TERMINALS</span>`;
+                        btn.style.borderColor = '';
+                    }, 3000);
+                }
+                pollTelemetry();
+            } catch (err) {
+                if (btn) {
+                    btn.classList.remove('scanning');
+                    btn.innerHTML = `<span>SCAN FAILED</span>`;
+                    setTimeout(() => {
+                        btn.innerHTML = `<svg viewBox="0 0 24 24" class="scan-icon"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg><span>AUTO-DETECT NEW TERMINALS</span>`;
+                    }, 2500);
+                }
+            }
+        }
+
+        // =====================================================================
+        // REAL-TIME TELEMETRY POLLER (SYNCS WITH LOCAL TRAJEDOR API)
+        // =====================================================================
+        async function pollTelemetry() {
+            try {
+                const res = await fetch('/api/trajedor/status');
+                if (res.ok) {
+                    const data = await res.json();
+
+                    if (data.macro) {
+                        const m = data.macro;
+                        if (m.dxy) {
+                            document.getElementById('cortex-dxy').innerText = m.dxy.price;
+                            document.getElementById('cockpit-dxy').innerText = m.dxy.price;
+                        }
+                        if (m.us10y_yield) {
+                            document.getElementById('cortex-us10y').innerText = m.us10y_yield.price + '%';
+                            document.getElementById('cockpit-us10y').innerText = m.us10y_yield.price + '%';
+                        }
+                        if (m.crude_oil) {
+                            document.getElementById('cockpit-oil').innerText = '$' + m.crude_oil.price;
+                        }
+                        if (m.gold_bias) {
+                            document.getElementById('cockpit-bias').innerText = m.gold_bias;
+                        }
+                    }
+
+                    if (data.accounts) {
+                        syncFleetAccounts(data.accounts);
+                        syncCortexAccounts(data.accounts);
+                    }
+
+                    if (data.thesis) {
+                        const t = data.thesis;
+                        document.getElementById('top-price-pill').innerText = `XAU/USD: $${t.entry_price.toFixed(2)}`;
+                        if (t.session_phase) {
+                            document.getElementById('cortex-session-chip').innerText = t.session_phase.replace(/_/g, ' ');
+                            document.getElementById('cockpit-session-pill').innerText = t.session_phase.replace(/_/g, ' ');
+                        }
+
+                        if (t.retail_long_pct !== undefined) {
+                            document.getElementById('cortex-sentiment').innerText = `${t.retail_long_pct}% LONG`;
+                            document.getElementById('cockpit-long-pct').innerText = `${t.retail_long_pct}% LONG`;
+                            document.getElementById('cockpit-short-pct').innerText = `${t.retail_short_pct}% SHORT`;
+                            document.getElementById('cockpit-sentiment-fill').style.width = `${t.retail_long_pct}%`;
+                        }
+
+                        if (t.memory_gate_approved !== undefined) {
+                            document.getElementById('cortex-gate').innerText = t.memory_gate_approved ? 'APPROVED (CLEAR)' : 'VETOED (BLOCKED)';
+                        }
+
+                        if (t.reasoning_monologue) {
+                            document.getElementById('cortex-monologue').innerText = `* ${t.reasoning_monologue} *`;
+                        }
+
+                        // Populate Council War Room Pods and Roundtable Transcript Stream
+                        if (t.roundtable_transcript && t.roundtable_transcript.length > 0) {
+                            const stream = document.getElementById('warroom-transcript-stream');
+                            if (stream) {
+                                stream.innerHTML = t.roundtable_transcript.map(entry => {
+                                    let color = 'var(--neural-cyan)';
+                                    if (entry.speaker.includes('Pitch Initiator')) color = '#f43f5e';
+                                    else if (entry.speaker.includes('Chairman')) color = '#facc15';
+                                    else if (entry.speaker.includes('Macro')) color = 'var(--neural-gold)';
+                                    else if (entry.speaker.includes('Location')) color = 'var(--neural-blue)';
+                                    else if (entry.speaker.includes('SMC')) color = 'var(--neural-purple)';
+                                    else if (entry.speaker.includes('Momentum')) color = '#00f0ff';
+                                    else if (entry.speaker.includes('Sentiment')) color = '#e879f9';
+                                    else if (entry.speaker.includes('CRO')) color = 'var(--neural-emerald)';
+                                    else if (entry.speaker.includes('Synthesis')) color = '#facc15';
+                                    else if (entry.speaker.includes('Memory')) color = 'var(--neural-rose)';
+                                    return `<div style="padding: 2px 0;"><strong style="color: ${color};">[${entry.speaker}]:</strong> <span style="color: #cbd5e1;">${entry.statement}</span></div>`;
+                                }).join('');
+                            }
+                        }
+
+                        if (t.council_votes) {
+                            const v = t.council_votes;
+                            const voteColor = (val) => val === 'BUY' ? 'var(--neural-emerald)' : (val === 'SELL' ? 'var(--neural-rose)' : '#94a3af');
+                            if (v['Macro Sentinel']) {
+                                const el = document.getElementById('pod-vote-macro');
+                                if (el) { el.innerText = v['Macro Sentinel']; el.style.color = voteColor(v['Macro Sentinel']); }
+                            }
+                            if (v['Location Agent']) {
+                                const el = document.getElementById('pod-vote-location');
+                                if (el) { el.innerText = v['Location Agent']; el.style.color = voteColor(v['Location Agent']); }
+                            }
+                            if (v['SMC Topology']) {
+                                const el = document.getElementById('pod-vote-smc');
+                                if (el) { el.innerText = v['SMC Topology']; el.style.color = voteColor(v['SMC Topology']); }
+                            }
+                            if (v['Momentum Agent']) {
+                                const el = document.getElementById('pod-vote-momentum');
+                                if (el) { el.innerText = v['Momentum Agent']; el.style.color = voteColor(v['Momentum Agent']); }
+                            }
+                            if (v['Sentiment Trap']) {
+                                const el = document.getElementById('pod-vote-sentiment');
+                                if (el) { el.innerText = v['Sentiment Trap']; el.style.color = voteColor(v['Sentiment Trap']); }
+                            }
+                            if (v['CRO Risk Guard']) {
+                                const el = document.getElementById('pod-vote-cro');
+                                if (el) { el.innerText = v['CRO Risk Guard']; el.style.color = voteColor(v['CRO Risk Guard']); }
+                            }
+                        }
+
+                        if (t.pitch_setup_type) {
+                            const el = document.getElementById('warroom-pitch-pill');
+                            if (el) el.innerText = `${t.pitch_setup_type} (${t.action})`;
+                        }
+                        if (t.council_consensus_pct !== undefined) {
+                            const el = document.getElementById('warroom-consensus-pill');
+                            if (el) el.innerText = `${t.council_consensus_pct}% CONSENSUS`;
+                        }
+                        if (t.action) {
+                            const el = document.getElementById('warroom-action-pill');
+                            if (el) {
+                                el.innerText = t.action;
+                                el.style.color = t.action === 'BUY' ? 'var(--neural-emerald)' : (t.action === 'SELL' ? 'var(--neural-rose)' : '#94a3af');
+                            }
+                        }
+
+                        // Populate 6 Specialized Analyst Chambers
+                        if (t.chambers_briefing) {
+                            const cb = t.chambers_briefing;
+                            // Room 1: Morphology Lab
+                            if (cb.room_1_morphology) {
+                                const m = cb.room_1_morphology;
+                                const biasEl = document.getElementById('chamber-morphology-bias');
+                                const descEl = document.getElementById('chamber-morphology-desc');
+                                if (biasEl) {
+                                    biasEl.innerText = `${m.harmony_bias || 'NEUTRAL'} (${m.harmony_score || 50}%)`;
+                                    biasEl.style.color = m.harmony_bias === 'BULLISH' ? 'var(--neural-emerald)' : (m.harmony_bias === 'BEARISH' ? 'var(--neural-rose)' : '#fff');
+                                }
+                                if (descEl) descEl.innerText = m.status_summary || m.tradeciety_strategy_mode || 'Scanning geometry...';
+                            }
+                            // Room 2: Supply/Demand & Liquidity Lab
+                            if (cb.room_2_supply_demand) {
+                                const sd = cb.room_2_supply_demand;
+                                const statEl = document.getElementById('chamber-sd-status');
+                                const descEl = document.getElementById('chamber-sd-desc');
+                                if (statEl) statEl.innerText = `BASE: $${sd.demand_base} / CEIL: $${sd.supply_ceiling}`;
+                                if (descEl) descEl.innerText = sd.status_summary || `Clearance: ${sd.execution_clearance} | Spread: ${sd.current_spread_pts}pts`;
+                            }
+                            // Room 3: SMC & Fibonacci Lab
+                            if (cb.room_3_quantitative) {
+                                const q = cb.room_3_quantitative;
+                                const oteEl = document.getElementById('chamber-quant-ote');
+                                const descEl = document.getElementById('chamber-quant-desc');
+                                if (oteEl) oteEl.innerText = q.in_golden_pocket_ote ? 'IN GOLDEN POCKET OTE' : `0.618: $${q.fib_618_level}`;
+                                if (descEl) descEl.innerText = q.status_summary || `0.618: $${q.fib_618_level} | 0.786: $${q.fib_786_level}`;
+                            }
+                            // Room 4: Momentum & Volatility Squeeze Lab
+                            if (cb.room_4_momentum_breakout) {
+                                const mb = cb.room_4_momentum_breakout;
+                                const statEl = document.getElementById('chamber-momentum-status');
+                                const descEl = document.getElementById('chamber-momentum-desc');
+                                if (statEl) statEl.innerText = mb.status_summary || `Squeeze: ${mb.is_bollinger_squeeze ? 'COILING' : 'EXPANDING'} | RSI: ${mb.rsi_14}`;
+                                if (descEl) descEl.innerText = `M5 Cross: ${mb.fast_cross_m5} | Disp: ${mb.displacement_last_3} pts`;
+                            }
+                            // Room 5: Order Flow & CVD Lab
+                            if (cb.room_5_orderflow_cvd) {
+                                const of = cb.room_5_orderflow_cvd;
+                                const statEl = document.getElementById('chamber-orderflow-status');
+                                const descEl = document.getElementById('chamber-orderflow-desc');
+                                if (statEl) statEl.innerText = of.status_summary || `CVD: ${of.cvd_divergence}`;
+                                if (descEl) descEl.innerText = `VWAP: $${of.vwap_level} | Ask Lifters: ${of.ask_lifters_pct}%`;
+                            }
+                            // Room 6: Macro Regime & Syndicate Debate
+                            if (cb.room_6_macro_syndicate) {
+                                const ms = cb.room_6_macro_syndicate;
+                                const mEl = document.getElementById('chamber-macro-status');
+                                const descEl = document.getElementById('chamber-macro-desc');
+                                if (mEl) mEl.innerText = ms.status_summary || `Syndicate: ${ms.syndicate_action} (${ms.syndicate_consensus}%)`;
+                                if (descEl) descEl.innerText = `Duel: ${ms.bull_champion} vs ${ms.bear_champion} | DXY: ${ms.dxy_price}`;
+                            }
+                        }
+                    }
+
+                    if (data.chart_feed && data.chart_feed.candles && data.chart_feed.candles.length > 0) {
+                        window.__LATEST_CHART_FEED__ = data.chart_feed;
+                    }
+                    if (data.thesis) {
+                        window.__LATEST_THESIS__ = data.thesis;
+                    }
+                    drawCockpitChart();
+
+                    if (data.lessons && data.lessons.length > 0) {
+                        const cont = document.getElementById('autopsy-rules-deck');
+                        cont.innerHTML = data.lessons.map(l => `
+                            <div style="background: rgba(255,255,255,0.03); border-left: 2px solid var(--neural-gold); padding: 10px; border-radius: 6px;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span style="color: var(--neural-gold); font-weight: 700;">[${l.rule_id || l.trigger}]</span>
+                                    <span style="color: var(--neural-emerald); font-size: 10px;">ACTIVE</span>
+                                </div>
+                                <div style="color: #94a3af; margin-top: 4px;">${l.lesson}</div>
+                                ${l.corrective_action ? `<div style="color: var(--neural-cyan); font-size: 10px; margin-top: 3px;">• Action: ${l.corrective_action}</div>` : ''}
+                            </div>
+                        `).join('');
+                    }
+
+                    if (data.history && data.history.length > 0) {
+                        const tbody = document.getElementById('vault-ledger-rows');
+                        tbody.innerHTML = data.history.map(row => `
+                            <tr>
+                                <td style="font-family: var(--font-mono); color: var(--neural-cyan);">#${row.ticket}</td>
+                                <td style="font-size: 10px; color: #64748b;">${row.entry_time ? row.entry_time.split('T')[1].split('.')[0] : 'N/A'}</td>
+                                <td>${row.account_id}</td>
+                                <td style="color: ${row.direction === 'BUY' ? 'var(--neural-emerald)' : 'var(--neural-rose)'}; font-weight: 700;">${row.direction}</td>
+                                <td>${row.volume}</td>
+                                <td>$${Number(row.entry_price).toFixed(2)}</td>
+                                <td>$${Number(row.sl).toFixed(2)}</td>
+                                <td>$${Number(row.tp).toFixed(2)}</td>
+                                <td>1:2.4</td>
+                                <td style="color: ${row.status === 'WIN' ? 'var(--neural-emerald)' : (row.status === 'LOSS' ? 'var(--neural-rose)' : 'var(--neural-gold)')}; font-weight: 700;">
+                                    ${row.status} (${row.realized_pnl >= 0 ? '+' : ''}${row.realized_pnl ? row.realized_pnl.toFixed(2) : '0.00'})
+                                </td>
+                                <td style="font-size: 10px; color: #94a3af;">${row.learned_rule || row.post_mortem || 'In-flight defense nominal'}</td>
+                            </tr>
+                        `).join('');
+                    }
+                }
+            } catch (e) {
+                // Keep UI smooth
+            }
+        }
+        // Immediately render preloaded detected accounts if injected by server
+        if (window.__PRELOADED_ACCOUNTS__ && Object.keys(window.__PRELOADED_ACCOUNTS__).length > 0) {
+            try {
+                syncFleetAccounts(window.__PRELOADED_ACCOUNTS__);
+                syncCortexAccounts(window.__PRELOADED_ACCOUNTS__);
+            } catch (err) {
+                console.error("Initial fleet render error:", err);
+            }
+        }
+        setInterval(pollTelemetry, 3000);
+        pollTelemetry();
+
+        // =====================================================================
+        // 6-SCREEN MULTI-TIMEFRAME MATRIX CONTROLLER
+        // =====================================================================
+        let _currentMTFSymbol = 'OANDA:XAUUSD';
+        let _mtfInitialized = false;
+
+        const _mtfConfig = [
+            { id: 'body-tf-m1', interval: '1', name: '1-Min' },
+            { id: 'body-tf-m5', interval: '5', name: '5-Min' },
+            { id: 'body-tf-m15', interval: '15', name: '15-Min' },
+            { id: 'body-tf-h1', interval: '60', name: '1-Hour' },
+            { id: 'body-tf-h4', interval: '240', name: '4-Hour' },
+            { id: 'body-tf-d1', interval: 'D', name: 'Daily' }
+        ];
+
+        function buildTVEmbedUrl(symbol, interval) {
+            const sym = encodeURIComponent(symbol);
+            return `https://s.tradingview.com/widgetembed/?frameElementId=tv_${interval}&symbol=${sym}&interval=${interval}&hidesidetoolbar=1&symboledit=1&saveimage=0&toolbarbg=060913&studies=[]&theme=dark&style=1&timezone=Etc%2FUTC&studies_overrides={}&overrides=%7B%22paneProperties.background%22%3A%22%23060913%22%2C%22paneProperties.vertGridProperties.color%22%3A%22rgba(255%2C255%2C255%2C0.03)%22%2C%22paneProperties.horzGridProperties.color%22%3A%22rgba(255%2C255%2C255%2C0.03)%22%7D&enabled_features=[]&disabled_features=[]&locale=en&utm_source=localhost`;
+        }
+
+        function initMTFCharts(forceReload = false) {
+            if (_mtfInitialized && !forceReload) return;
+            _mtfInitialized = true;
+
+            _mtfConfig.forEach(cfg => {
+                const container = document.getElementById(cfg.id);
+                if (container) {
+                    const url = buildTVEmbedUrl(_currentMTFSymbol, cfg.interval);
+                    container.innerHTML = `<iframe src="${url}" allowtransparency="true" scrolling="no" allowfullscreen style="width:100%;height:100%;border:none;"></iframe>`;
+                }
+            });
+            const statusEl = document.getElementById('mtf-sync-status');
+            if (statusEl) statusEl.innerText = `6 SCREENS SYNCED: ${_currentMTFSymbol}`;
+        }
+
+        function setMTFPreset(symbol, btnEl) {
+            _currentMTFSymbol = symbol;
+            document.querySelectorAll('.btn-preset').forEach(b => b.classList.remove('active-preset'));
+            if (btnEl) btnEl.classList.add('active-preset');
+            const inp = document.getElementById('mtf-custom-input');
+            if (inp) inp.value = symbol;
+            initMTFCharts(true);
+        }
+
+        function applyCustomMTFSymbol() {
+            const inp = document.getElementById('mtf-custom-input');
+            if (inp && inp.value.trim()) {
+                let sym = inp.value.trim().toUpperCase();
+                if (!sym.includes(':')) {
+                    sym = 'OANDA:' + sym;
+                }
+                _currentMTFSymbol = sym;
+                document.querySelectorAll('.btn-preset').forEach(b => b.classList.remove('active-preset'));
+                initMTFCharts(true);
+            }
+        }
+
+        function refreshAllMTFCharts() {
+            initMTFCharts(true);
+        }
+
+        function toggleMaximizeCard(cardId) {
+            const card = document.getElementById(cardId);
+            if (!card) return;
+            const isMax = card.classList.contains('maximized');
+            document.querySelectorAll('.mtf-screen-card').forEach(c => c.classList.remove('maximized'));
+            if (!isMax) {
+                card.classList.add('maximized');
+            }
+        }
+    </script>
+</body>
+</html>

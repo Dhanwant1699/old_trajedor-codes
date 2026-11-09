@@ -1,0 +1,19 @@
+{
+  "symbol": "BTCUSD",
+  "name": "BITCOIN (BTCUSD)",
+  "master_action": "HOLD",
+  "master_action_class": "action-hold",
+  "entry_price": 0.0,
+  "stop_loss": 0.0,
+  "take_profit_1": 0.0,
+  "take_profit_2": 0.0,
+  "quorum_score": 64,
+  "vote_breakdown": "9/14 BUY",
+  "cro_lots": "0.00 Lots",
+  "cro_status": "VETOED (QUORUM < 75%)",
+  "news_status": "CLEAR",
+  "news_sub": "Crypto Macro Flow Active",
+  "setup_status": "MONITORING",
+  "debate_summary": "Bitcoin Council Split/Neutral (BUY:9, SELL:0, HOLD:5 -> 64%). Below 75% minimum quorum threshold. Standing by.",
+  "last_updated": "2026-09-21 08:05:30 UTC"
+}

@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "global_settings": {
+    "engine_active": true,
+    "global_hard_lot_cap": 0.08,
+    "max_spread_points": 45,
+    "news_filter_enabled": true,
+    "news_blackout_minutes": 15
+  },
+  "accounts": {
+    "acc_4": {
+      "id": "acc_4",
+      "name": "Account #4 (GTCGlobalSA-Server 2)",
+      "terminal_path": "C:\\Program Files\\MetaTrader 5 - 3\\terminal64.exe",
+      "currency": "USD",
+      "magic_number": 778110,
+      "mode": "STANDARD_PROP",
+      "is_active": true,
+      "allowed_symbols": [
+        "XAUUSD"
+      ],
+      "symbol_lots": {
+        "XAUUSD": 0.02
+      },
+      "symbol_settings": {
+        "XAUUSD": {
+          "max_lot_size": 0.02,
+          "max_open_positions": 1,
+          "daily_profit_target": 50,
+          "daily_max_loss": 30
+        }
+      },
+      "max_open_trades": 1,
+      "max_lot_size": 0.02,
+      "min_lot_size": 0.01,
+      "daily_profit_target": 100000,
+      "daily_max_loss": 500000,
+      "trailing_be_r": 0.5,
+      "tp1_close_pct": 50
+    }
+  },
+  "archived_accounts": {}
+}

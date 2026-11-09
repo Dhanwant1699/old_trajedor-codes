@@ -1,0 +1,208 @@
+{
+  "symbol": "XAUUSD",
+  "timestamp_utc": "2026-10-04T07:39:21.969267+00:00",
+  "live_price": 4139.52,
+  "global_shock_score": 95,
+  "shock_threat_level": "HIGH_MARKET_SHOCK",
+  "gold_macro_bias": "STRONG_BULLISH",
+  "blackout_active": false,
+  "blackout_reason": null,
+  "active_shocks": [
+    "Geopolitical Shock: Active headlines mentioning attack, missile, drone (Safe-haven gold demand surge).",
+    "Central Bank Catalyst: Policy speculation involving fed, rate hike.",
+    "Macroeconomic Data Catalyst: Inflation/labor markers inflation, pce, nonfarm.",
+    "Institutional Accumulation: Sovereign de-dollarization / gold reserve purchases (bullion)."
+  ],
+  "fractal_alignment_pct": 33.3,
+  "institutional_action_clearance": "TACTICAL_SCALP_ONLY",
+  "macro_suite": {
+    "timestamp_utc": "2026-10-04T07:39:19.011316+00:00",
+    "dxy": {
+      "ticker": "DX-Y.NYB",
+      "name": "US Dollar Index (DXY)",
+      "price": 101.924,
+      "previous_close": 101.932,
+      "change": -0.008,
+      "change_pct": -0.01,
+      "trend": "DOWN",
+      "status": "LIVE"
+    },
+    "us10y_yield": {
+      "ticker": "^TNX",
+      "name": "US 10-Year Treasury Yield",
+      "price": 5.277,
+      "previous_close": 5.237,
+      "change": 0.04,
+      "change_pct": 0.76,
+      "trend": "UP",
+      "status": "LIVE"
+    },
+    "crude_oil": {
+      "ticker": "CL=F",
+      "name": "Crude Oil (WTI)",
+      "price": 91.11,
+      "previous_close": 92.87,
+      "change": -1.76,
+      "change_pct": -1.9,
+      "trend": "DOWN",
+      "status": "LIVE"
+    },
+    "breaking_news": [
+      {
+        "source": "StoneX",
+        "title": "Gold Update: XAU/USD Remains Under Pressure Even After the NFP Report - StoneX",
+        "pub_date": "Fri, 02 Oct 2026 22:00:05 GMT",
+        "is_gold_relevant": true
+      },
+      {
+        "source": "FOREX.com",
+        "title": "Gold Forecast: Are Bears Regaining Control of XAU/USD? - FOREX.com",
+        "pub_date": "Tue, 29 Sep 2026 18:39:47 GMT",
+        "is_gold_relevant": true
+      },
+      {
+        "source": "FXStreet",
+        "title": "Gold Price Forecast: US Nonfarm Payrolls holds the key to XAU/USD\u2019s next big move - FXStreet",
+        "pub_date": "Fri, 02 Oct 2026 03:35:05 GMT",
+        "is_gold_relevant": true
+      },
+      {
+        "source": "Bitget",
+        "title": "What Is Gold Really Trading? Building a Valuation Map for XAU/USD - Bitget",
+        "pub_date": "Thu, 01 Oct 2026 10:30:24 GMT",
+        "is_gold_relevant": true
+      },
+      {
+        "source": "Moomoo",
+        "title": "Rising expectations of Federal Reserve rate hikes, combined with a stronger U.S. dollar, pushed gold below the $4,200 integer threshold. - Moomoo",
+        "pub_date": "Mon, 28 Sep 2026 05:09:45 GMT",
+        "is_gold_relevant": true
+      },
+      {
+        "source": "FXEmpire",
+        "title": "Gold (XAUUSD) & Silver Price Forecast: Gold Rebounds, Will NFP Unlock $4,215? - FXEmpire",
+        "pub_date": "Fri, 02 Oct 2026 07:56:44 GMT",
+        "is_gold_relevant": true
+      },
+      {
+        "source": "tmgm.com",
+        "title": "Gold defies US Dollar surge as US yield slide revives Bullion demand - tmgm.com",
+        "pub_date": "Thu, 01 Oct 2026 21:20:46 GMT",
+        "is_gold_relevant": true
+      },
+      {
+        "source": "FXStreet",
+        "title": "Gold can\u2019t catch a PCE break as long US yields keep climbing - FXStreet",
+        "pub_date": "Wed, 30 Sep 2026 18:02:43 GMT",
+        "is_gold_relevant": true
+      },
+      {
+        "source": "FXEmpire",
+        "title": "Gold (XAU/USD) & Silver Price Forecast: Softer PCE Cuts Fed Hike Bets - FXEmpire",
+        "pub_date": "Thu, 01 Oct 2026 08:04:35 GMT",
+        "is_gold_relevant": true
+      },
+      {
+        "source": "tmgm.com",
+        "title": "Gold springs from $4,110 as Oil rout eases inflation heat - tmgm.com",
+        "pub_date": "Tue, 29 Sep 2026 20:19:11 GMT",
+        "is_gold_relevant": true
+      }
+    ],
+    "gold_macro_impact_score": -30,
+    "gold_bias": "NEUTRAL",
+    "macro_narrative": "US Dollar stable at 101.924 | US 10Y Treasury Yield rising (5.277%, +0.040); institutional capital rotating into paper yield"
+  },
+  "multi_tf_matrix": [
+    {
+      "timeframe": "1_YEAR / SECULAR",
+      "trend": "STRONG_BULLISH",
+      "high": 5598.38,
+      "low": 3928.83,
+      "change_pct": 3.92,
+      "valuation_zone": "DISCOUNT",
+      "narrative": "Over the last 12 months, Gold moved +3.92% (+156.2 pts) between $3928.83 and 52-week peak $5598.38. Secular super-cycle trend remains overwhelmingly BULLISH, underpinned by global sovereign de-dollarization and fiat debasement."
+    },
+    {
+      "timeframe": "6_MONTH / SEMI-ANNUAL",
+      "trend": "CONSOLIDATION_RANGE",
+      "high": 4773.48,
+      "low": 3943.73,
+      "change_pct": -10.51,
+      "valuation_zone": "DISCOUNT",
+      "narrative": "Semi-annual range span: $3943.73 to $4773.48 (-10.51%). Consecutive higher swing lows confirm strong institutional accumulation on every macroeconomic dip."
+    },
+    {
+      "timeframe": "1_MONTH / MONTHLY",
+      "trend": "RETRACEMENT_DISCOUNT",
+      "high": 4227.91,
+      "low": 4125.18,
+      "change_pct": -0.5,
+      "valuation_zone": "DISCOUNT",
+      "narrative": "Current Month bar: Open $4160.27, High $4227.91, Low $4125.18. Price is trading in the DISCOUNT zone relative to the Monthly Equilibrium of $4176.55."
+    },
+    {
+      "timeframe": "1_WEEK / WEEKLY",
+      "trend": "PULLBACK_CONSOLIDATION",
+      "high": 4443.03,
+      "low": 4110.86,
+      "change_pct": -6.35,
+      "valuation_zone": "DISCOUNT",
+      "narrative": "Weekly swing structure: Previous Week High/Low established between $4110.86 and $4443.03. Weekly institutional liquidity resting above $4443.03."
+    },
+    {
+      "timeframe": "DAILY (D1)",
+      "trend": "BEARISH_CORRECTION",
+      "high": 4696.74,
+      "low": 4110.86,
+      "change_pct": -10.21,
+      "valuation_zone": "DISCOUNT",
+      "narrative": "Daily price action: PDH at $4696.74, PDL at $4110.86. Price holding structural integrity with sustained volume expansion."
+    },
+    {
+      "timeframe": "4_HOUR (H4)",
+      "trend": "BULLISH_ORDER_FLOW",
+      "high": 4227.91,
+      "low": 4113.17,
+      "change_pct": 0.52,
+      "valuation_zone": "DISCOUNT",
+      "narrative": "H4 Structure: Last 24 bars range $4113.17 - $4227.91. Institutional Fair Value Gaps defended; order flow biased toward buy-side liquidity."
+    },
+    {
+      "timeframe": "1_HOUR (H1)",
+      "trend": "BEARISH_PULLBACK",
+      "high": 4227.91,
+      "low": 4125.18,
+      "change_pct": -0.89,
+      "valuation_zone": "DISCOUNT",
+      "narrative": "H1 Session Structure: High $4227.91, Low $4125.18. Session momentum active."
+    },
+    {
+      "timeframe": "15_MINUTE (M15)",
+      "trend": "BEARISH_LIQUIDITY_HUNT",
+      "high": 4202.05,
+      "low": 4125.18,
+      "change_pct": -1.28,
+      "valuation_zone": "DISCOUNT",
+      "narrative": "M15 Intraday: Imbalance between $4125.18 and $4202.05. Precision entry zone."
+    },
+    {
+      "timeframe": "5_MINUTE (M5)",
+      "trend": "EXECUTION_READY",
+      "high": 4149.8,
+      "low": 4135.72,
+      "change_pct": -0.17,
+      "valuation_zone": "DISCOUNT",
+      "narrative": "M5 Execution Sniper: Immediate range $4135.72 - $4149.80. Low-slippage entry trigger."
+    }
+  ],
+  "playbook": {
+    "key_macro_support": 4110.86,
+    "key_macro_resistance": 4696.74,
+    "intraday_discount_zone": 4125.18,
+    "intraday_premium_target": 4202.05,
+    "recommended_invalidation_sl": 4121.68,
+    "recommended_take_profit_tp1": 4148.02,
+    "recommended_take_profit_tp2": 4157.52
+  }
+}

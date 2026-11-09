@@ -1,0 +1,23 @@
+=== TRAJEDOR 360-DEGREE INSTITUTIONAL MARKET RESEARCH DOSSIER ===
+Asset: XAUUSD | Spot Price: $4139.52 | Time: 2026-10-04 07:39:21 UTC
+
+1. GLOBAL MACRO SHOCKS & CATALYSTS:
+   - Shock Threat Level: HIGH_MARKET_SHOCK (Global Shock Index: 95/100)
+   - Macro Gold Bias: STRONG_BULLISH
+   - Active Flashpoints: 4 detected.
+   - Sovereign Flows: STRONG_CENTRAL_BANK_ACCUMULATION (PBOC, RBI & Global Central Banks buying at record pace)
+   - Currency Context: DXY at 101.924 (-0.01% - DOWN)
+   - Real Yields (TIPS): US 10Y Yield at 5.277% (+0.040 bps), Crude Oil at $91.11 (-1.90%)
+
+2. MULTI-TIMEFRAME STORY (1-YEAR DOWN TO 5-MINUTES):
+   - 1-Year Supercycle: Over the last 12 months, Gold moved +3.92% (+156.2 pts) between $3928.83 and 52-week peak $5598.38. Secular super-cycle trend remains overwhelmingly BULLISH, underpinned by global sovereign de-dollarization and fiat debasement.
+   - 6-Month Cycle: Semi-annual range span: $3943.73 to $4773.48 (-10.51%). Consecutive higher swing lows confirm strong institutional accumulation on every macroeconomic dip.
+   - 1-Month Horizon: Current Month bar: Open $4160.27, High $4227.91, Low $4125.18. Price is trading in the DISCOUNT zone relative to the Monthly Equilibrium of $4176.55.
+   - 1-Week Horizon: Weekly swing structure: Previous Week High/Low established between $4110.86 and $4443.03. Weekly institutional liquidity resting above $4443.03.
+   - Daily Intraday: Daily price action: PDH at $4696.74, PDL at $4110.86. Price holding structural integrity with sustained volume expansion.
+   - Micro Execution (H4/M15/M5): M15 Intraday: Imbalance between $4125.18 and $4202.05. Precision entry zone.
+
+3. FRACTAL ALIGNMENT & ACTION CLEARANCE:
+   - Alignment Confluence: 33.3%
+   - Institutional Action Clearance: TACTICAL_SCALP_ONLY
+   - Verdict: Timeframe conflict observed (33.3% alignment). No swing trades allowed. Only fast, precision scalps on M5/M15 with strict 1:2 R:R.

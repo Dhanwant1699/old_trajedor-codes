@@ -1,0 +1,18 @@
+# BTCUSD AI Trader and Specialized Agent Council
+from agents.btcusd.btcusd_ai_trader import CryptoMasterCoordinator as BTCUSDAITrader
+from agents.btcusd.btcusd_smc_agent import CryptoSMCAgent as BTCUSDSMCAgent
+from agents.btcusd.btcusd_trend_agent import CryptoTrendAgent as BTCUSDTrendAgent
+from agents.btcusd.btcusd_mean_reversion_agent import CryptoMeanReversionAgent as BTCUSDMeanReversionAgent
+from agents.btcusd.btcusd_macro_agent import CryptoMacroAgent as BTCUSDMacroAgent
+from agents.btcusd.btcusd_orderflow_agent import CryptoOrderFlowAgent as BTCUSDOrderFlowAgent
+from agents.btcusd.btcusd_supply_demand_agent import CryptoSupplyDemandAgent as BTCUSDSupplyDemandAgent
+from agents.btcusd.btcusd_breakout_agent import CryptoBreakoutAgent as BTCUSDBreakoutAgent
+from agents.btcusd.btcusd_fibonacci_agent import CryptoFibonacciAgent as BTCUSDFibonacciAgent
+from agents.btcusd.btcusd_pattern_agent import CryptoChartPatternAgent as BTCUSDChartPatternAgent
+from agents.btcusd.btcusd_scalping_agent import CryptoScalpingAgent as BTCUSDScalpingAgent
+from agents.btcusd.btcusd_regime_agent import CryptoRegimeDetectionAgent as BTCUSDRegimeAgent
+from agents.btcusd.btcusd_liquidity_agent import CryptoLiquidityExecutionAgent as BTCUSDLiquidityAgent
+from agents.btcusd.btcusd_tick_flow_agent import CryptoTickOrderFlowAgent as BTCUSDTickFlowAgent
+from agents.btcusd.btcusd_volume_delta_agent import CryptoVolumeDeltaAgent as BTCUSDVolumeDeltaAgent
+from agents.btcusd.btcusd_risk_agent import CryptoChiefRiskOfficerAgent as BTCUSDChiefRiskOfficer
+from agents.btcusd.btcusd_position_manager_agent import CryptoPositionManagerAgent as BTCUSDPositionManagerAgent
